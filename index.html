@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Sunday Mass songs and practice videos for the St. Genevieve 8:30 AM choir."
+    >
+    <title>Voices of St. Gen</title>
+    <link rel="preconnect" href="https://i.ytimg.com">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#current-sunday">Skip to current Sunday</a>
+
+    <header class="site-header">
+      <nav class="topbar" aria-label="Primary navigation">
+        <a class="brand" href="#">
+          <span class="brand-mark" aria-hidden="true">V</span>
+          <span>
+            <span class="brand-name">Voices of St. Gen</span>
+            <span class="brand-subtitle">8:30 AM Choir</span>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="#current-sunday">Songs</a>
+          <a href="#practice-videos">Videos</a>
+          <a href="#calendar">Calendar</a>
+        </div>
+      </nav>
+
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">Saint Genevieve Catholic Church</p>
+        <h1 id="page-title">Sunday Mass music, organized for choir practice.</h1>
+        <p class="hero-copy">
+          Song plans, PDF packets, and lightweight YouTube practice videos for
+          St. Genevieve choir members.
+        </p>
+        <div class="hero-actions" aria-label="Quick links">
+          <a class="button primary" href="#current-sunday">View this Sunday</a>
+          <a class="button secondary" href="#practice-videos">Practice videos</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="notice" aria-label="Site note">
+        <strong>Choir member note:</strong>
+        Contents of this website are intended for St. Genevieve Choir use.
+      </section>
+
+      <section id="current-sunday" class="section current-section" aria-live="polite">
+        <div class="section-heading">
+          <p class="eyebrow">Current plan</p>
+          <h2>Current Sunday</h2>
+        </div>
+        <div id="current-plan" class="current-plan"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Season archive</p>
+          <h2>All Sunday plans</h2>
+        </div>
+        <div id="plan-list" class="plan-list"></div>
+      </section>
+
+      <section id="practice-videos" class="section video-section">
+        <div class="section-heading">
+          <p class="eyebrow">Listen before rehearsal</p>
+          <h2>Practice videos</h2>
+          <p>
+            Videos load only after you press play, keeping the page quick even
+            with a full season of songs.
+          </p>
+        </div>
+        <div id="video-grid" class="video-grid"></div>
+      </section>
+
+      <section id="calendar" class="section calendar-section">
+        <div class="section-heading">
+          <p class="eyebrow">Scheduling</p>
+          <h2>Cantors and pianists</h2>
+        </div>
+        <div class="calendar-frame">
+          <iframe
+            title="St. Gen Cantors and Pianists calendar"
+            src="https://www.google.com/calendar/embed?color=%23cca6ac&amp;mode=agenda&amp;showCalendars=1&amp;showPrint=0&amp;showTz=0&amp;src=4cqbh046vc392jmshkm4452cao%40group.calendar.google.com"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Voices of St. Gen is a simple practice hub for the 8:30 AM choir.</p>
+      <a href="https://stgenchurch.org/" target="_blank" rel="noreferrer">St. Genevieve Catholic Church</a>
+    </footer>
+  </body>
+</html>
