@@ -1,5 +1,8 @@
 const TODAY = new Date();
 const SITE_TIME_ZONE = "America/Los_Angeles";
+const PRODUCTION_HOSTS = new Set(["voicesofstgen.com", "www.voicesofstgen.com"]);
+const isProductionHost = PRODUCTION_HOSTS.has(window.location.hostname);
+const isReturningVisitor = getReturningVisitorStatus();
 
 const choirPlans = [
   {
@@ -313,6 +316,13 @@ render();
 renderGallery();
 setupGalleryDialog();
 setupArchiveToggle();
+setupGlobalAnalytics();
+trackEvent("site_loaded", {
+  current_plan_date: selectedPlan.date,
+  current_plan_title: selectedPlan.title,
+  total_plans: choirPlans.length,
+  total_gallery_images: galleryImages.length
+});
 
 function render() {
   renderCurrentPlan(selectedPlan);
@@ -400,6 +410,11 @@ function renderPlanList() {
   document.querySelectorAll("[data-plan-date]").forEach((button) => {
     button.addEventListener("click", () => {
       selectedPlan = choirPlans.find((plan) => plan.date === button.dataset.planDate);
+      trackEvent("plan_selected", {
+        plan_date: selectedPlan.date,
+        plan_title: selectedPlan.title,
+        is_archived: selectedPlan.date < getCurrentSundayDateString(TODAY)
+      });
       render();
       document.querySelector("#current-sunday").scrollIntoView({ behavior: "smooth", block: "start" });
     });
@@ -429,6 +444,12 @@ function setupArchiveToggle() {
     archivePanelEl.hidden = !shouldOpen;
     archiveToggleEl.setAttribute("aria-expanded", String(shouldOpen));
     archiveToggleEl.textContent = shouldOpen ? "Hide archived plans" : "Show archived plans";
+
+    if (shouldOpen) {
+      trackEvent("view_archive", {
+        archived_plan_count: archiveListEl.querySelectorAll(".plan-card").length
+      });
+    }
   });
 }
 
@@ -491,7 +512,7 @@ function setupGalleryDialog() {
 
   galleryDialogEl.querySelectorAll("[data-gallery-direction]").forEach((button) => {
     button.addEventListener("click", () => {
-      moveGallery(Number.parseInt(button.dataset.galleryDirection, 10));
+      moveGallery(Number.parseInt(button.dataset.galleryDirection, 10), "button");
     });
   });
 
@@ -504,12 +525,12 @@ function setupGalleryDialog() {
   galleryDialogEl.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") {
       event.preventDefault();
-      moveGallery(-1);
+      moveGallery(-1, "keyboard");
     }
 
     if (event.key === "ArrowRight") {
       event.preventDefault();
-      moveGallery(1);
+      moveGallery(1, "keyboard");
     }
   });
 
@@ -521,7 +542,7 @@ function setupGalleryDialog() {
     const distance = event.changedTouches[0].clientX - galleryTouchStartX;
 
     if (Math.abs(distance) > 45) {
-      moveGallery(distance > 0 ? -1 : 1);
+      moveGallery(distance > 0 ? -1 : 1, "swipe");
     }
   }, { passive: true });
 }
@@ -529,15 +550,20 @@ function setupGalleryDialog() {
 function openGalleryImage(index) {
   selectedGalleryIndex = index;
   renderGalleryDialogImage();
+  trackEvent("open_gallery", getGalleryEventProperties("thumbnail"));
 
   if (typeof galleryDialogEl.showModal === "function") {
     galleryDialogEl.showModal();
   }
 }
 
-function moveGallery(direction) {
+function moveGallery(direction, method = "button") {
   selectedGalleryIndex = (selectedGalleryIndex + direction + galleryImages.length) % galleryImages.length;
   renderGalleryDialogImage();
+  trackEvent("gallery_navigated", {
+    ...getGalleryEventProperties(method),
+    direction: direction > 0 ? "next" : "previous"
+  });
 }
 
 function renderGalleryDialogImage() {
@@ -547,6 +573,18 @@ function renderGalleryDialogImage() {
   galleryDialogImageEl.src = image.src;
   galleryDialogImageEl.alt = image.alt;
   galleryDialogCaptionEl.textContent = caption;
+}
+
+function getGalleryEventProperties(method) {
+  const image = galleryImages[selectedGalleryIndex];
+
+  return {
+    method,
+    image_index: selectedGalleryIndex,
+    image_number: selectedGalleryIndex + 1,
+    image_src: image.src,
+    image_alt: image.alt
+  };
 }
 
 function getUniqueVideosForPlan(plan) {
@@ -585,6 +623,13 @@ function loadVideo(button) {
   const videoId = button.dataset.videoId;
   const title = button.dataset.videoTitle;
 
+  trackEvent("play_practice_video", {
+    video_id: videoId,
+    video_title: title,
+    plan_date: selectedPlan.date,
+    plan_title: selectedPlan.title
+  });
+
   shell.innerHTML = `
     <iframe
       src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0"
@@ -595,6 +640,114 @@ function loadVideo(button) {
       allowfullscreen
     ></iframe>
   `;
+}
+
+function setupGlobalAnalytics() {
+  document.addEventListener("click", (event) => {
+    if (!(event.target instanceof Element)) {
+      return;
+    }
+
+    const target = event.target;
+    const pdfLink = target.closest(".pdf-links a");
+    const footerLink = target.closest(".site-footer a");
+    const currentSundayLink = target.closest('a[href="#current-sunday"]');
+    const videosLink = target.closest('a[href="#practice-videos"]');
+    const galleryLink = target.closest('a[href="#gallery"]');
+    const calendarLink = target.closest('a[href="#calendar"]');
+
+    if (pdfLink) {
+      trackEvent("download_pdf_packet", {
+        label: pdfLink.textContent.trim(),
+        url: pdfLink.href,
+        plan_date: selectedPlan.date,
+        plan_title: selectedPlan.title
+      });
+    }
+
+    if (footerLink) {
+      trackEvent("church_link_clicked", {
+        url: footerLink.href
+      });
+    }
+
+    if (currentSundayLink) {
+      if (currentSundayLink.classList.contains("primary")) {
+        trackEvent("view_current_sunday", {
+          source: "hero"
+        });
+      } else {
+        trackEvent("open_songs", {
+          source: currentSundayLink.classList.contains("skip-link") ? "skip_link" : "navigation"
+        });
+      }
+    }
+
+    if (videosLink) {
+      trackEvent("open_videos", {
+        source: videosLink.classList.contains("secondary") ? "hero" : "navigation"
+      });
+    }
+
+    if (galleryLink) {
+      trackEvent("open_gallery", {
+        source: "navigation"
+      });
+    }
+
+    if (calendarLink) {
+      trackEvent("open_calendar", {
+        source: "navigation"
+      });
+    }
+  });
+
+  observeOnce("#practice-videos", "practice_videos_viewed");
+  observeOnce("#gallery", "gallery_viewed", { total_gallery_images: galleryImages.length });
+  observeOnce("#calendar", "calendar_viewed");
+}
+
+function observeOnce(selector, eventName, properties = {}) {
+  const element = document.querySelector(selector);
+
+  if (!element || !("IntersectionObserver" in window)) {
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries.some((entry) => entry.isIntersecting)) {
+      trackEvent(eventName, properties);
+      observer.disconnect();
+    }
+  }, { threshold: 0.35 });
+
+  observer.observe(element);
+}
+
+function trackEvent(eventName, properties = {}) {
+  if (!isProductionHost || !window.posthog || typeof window.posthog.capture !== "function") {
+    return;
+  }
+
+  window.posthog.capture(eventName, {
+    site: "voicesofstgen",
+    current_plan_date: selectedPlan?.date,
+    current_plan_title: selectedPlan?.title,
+    returning_visitor: isReturningVisitor,
+    ...properties
+  });
+}
+
+function getReturningVisitorStatus() {
+  const storageKey = "voicesofstgen_seen";
+
+  try {
+    const hasVisited = window.localStorage.getItem(storageKey) === "true";
+    window.localStorage.setItem(storageKey, "true");
+    return hasVisited;
+  } catch {
+    return false;
+  }
 }
 
 function formatDate(dateString) {
