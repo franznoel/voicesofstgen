@@ -7,7 +7,7 @@ Static website for the St. Genevieve 8:30 AM choir. It shows Sunday Mass song pl
 From this repo:
 
 ```bash
-python3 -m http.server 4173
+npm start
 ```
 
 Then open:
@@ -18,11 +18,19 @@ http://127.0.0.1:4173/
 
 Press `Ctrl+C` in the terminal to stop the server.
 
+You can choose a different port with:
+
+```bash
+PORT=3000 npm start
+```
+
 ## Files
 
 - `index.html` - page structure and content containers.
 - `styles.css` - responsive layout and visual styling.
 - `script.js` - temporary static song data and rendering logic.
+- `server.js` - small dependency-free Node static server.
+- `package.json` - local scripts for running and checking the site.
 
 ## Content Model
 

@@ -1,4 +1,5 @@
 const TODAY = new Date();
+const SITE_TIME_ZONE = "America/Los_Angeles";
 
 const choirPlans = [
   {
@@ -111,6 +112,96 @@ const choirPlans = [
       { role: "Recessional", title: "Go Out, Go Out", composer: "Stephen", videoId: "bdiEEVIhvPI" }
     ],
     optionalSongs: []
+  },
+  {
+    date: "2026-05-24",
+    title: "Pentecost Sunday (A)",
+    pdfLinks: [
+      { label: "All PDFs", url: "https://drive.google.com/file/d/1W4kGltRFsW3AyEReumYG8uN3qxwRMdjV/view?usp=sharing" }
+    ],
+    songs: [
+      { role: "Mass parts", title: "Mass of Christ Savior", composer: "", videoId: "" },
+      { role: "Entrance", title: "Creator Spirit, by Whose Aid", composer: "Lasst Uns Erfreuen", videoId: "MLsj73tAh7g" },
+      { role: "Sequence", title: "Come, O Holy Spirit", composer: "Hymn to Joy", videoId: "3Jqlc69s4EA" },
+      { role: "Preparation of Gifts", title: "Holy Spirit, Come Now", composer: "", videoId: "1Tgz9X8l3GM" },
+      { role: "Communion", title: "Many and One", composer: "", videoId: "" },
+      { role: "Recessional", title: "One Spirit, One Church", composer: "", videoId: "iMpa11CUg0Q" }
+    ],
+    optionalSongs: []
+  },
+  {
+    date: "2026-05-31",
+    title: "The Most Holy Trinity (A)",
+    pdfLinks: [
+      { label: "All PDFs", url: "https://drive.google.com/file/d/1gre-KriAwqTGnd1HRKXdCSAWwZ1J-qqa/view?usp=sharing" }
+    ],
+    songs: [
+      { role: "Entrance", title: "Holy, Holy, Holy", composer: "", videoId: "ntdcY8q7a9E" },
+      { role: "Preparation of Gifts", title: "Eye Has Not Seen", composer: "", videoId: "7jYgOQC82aU" },
+      { role: "Communion", title: "I Am the Bread of Life", composer: "Angrisano", videoId: "08Wk9Z_6mvQ" },
+      { role: "Recessional", title: "Holy God, We Praise Your Name", composer: "", videoId: "0ytf_TIujPw" }
+    ],
+    optionalSongs: []
+  },
+  {
+    date: "2026-06-07",
+    title: "The Most Holy Body and Blood of Christ (A)",
+    pdfLinks: [],
+    songs: [
+      { role: "Entrance", title: "Table of Plenty", composer: "Dan Schutte", videoId: "okAMb_ra8Uw" },
+      { role: "Sequence", title: "Corpus Christi Sequence", composer: "", videoId: "xbrl2zWi3EA" },
+      { role: "Offertory", title: "As Christ Is for Us", composer: "Janet Whitaker", videoId: "LIJ2MJMd_ks" },
+      { role: "Communion", title: "Bread of Angels", composer: "", videoId: "0XMGRUUFr0M" },
+      { role: "Communion", title: "Miracle of Grace", composer: "", videoId: "-tg7539_wOE" },
+      { role: "Recessional", title: "Alleluia, Sing to Jesus", composer: "Hyfrydol", videoId: "Wh61poqcnpA" }
+    ],
+    optionalSongs: []
+  },
+  {
+    date: "2026-06-14",
+    title: "Eleventh Sunday in Ordinary Time (A)",
+    pdfLinks: [],
+    songs: [
+      { role: "Note", title: "10:30 Ugandan Choir", composer: "", videoId: "" },
+      { role: "Entrance", title: "Our God Is Here", composer: "", videoId: "WtSnIxnIB3k" },
+      { role: "Offertory", title: "Servant Song", composer: "Donna McGargill", videoId: "nVesi-4A52w" },
+      { role: "Communion", title: "Ubi Caritas", composer: "Hurd", videoId: "TSk6NDRK44M" },
+      { role: "Communion", title: "On Eagle's Wings", composer: "Joncas", videoId: "oXP-FsNUWOc" },
+      { role: "Recessional", title: "With One Voice", composer: "Manalo", videoId: "wwXtDuLFHJg" }
+    ],
+    optionalSongs: [
+      { title: "Ubi Caritas - Alejandro D. Consolacion II", videoId: "x93VMgWSPsg" }
+    ]
+  },
+  {
+    date: "2026-06-21",
+    title: "Twelfth Sunday in Ordinary Time (A)",
+    pdfLinks: [],
+    songs: [
+      { role: "Entrance", title: "In This Place", composer: "Thompson", videoId: "kMcroYiXb7E" },
+      { role: "Offertory", title: "In Every Age", composer: "Whitaker", videoId: "5BxarTJavmY" },
+      { role: "Communion", title: "Be Not Afraid", composer: "Dufford", videoId: "2oSiX1WKg4w" },
+      { role: "Communion", title: "Take and Eat", composer: "Joncas", videoId: "XkvOnb2fsvU" },
+      { role: "Father's Day Song", title: "I Am Ever With You", composer: "", videoId: "akVBHThhmHk" },
+      { role: "Recessional", title: "Rain Down", composer: "Cortez", videoId: "pmOswvlS6CQ" }
+    ],
+    optionalSongs: []
+  },
+  {
+    date: "2026-06-28",
+    title: "Thirteenth Sunday in Ordinary Time (A)",
+    pdfLinks: [],
+    songs: [
+      { role: "Entrance", title: "Lift High the Cross", composer: "Crucifer / Nicholson", videoId: "jiO3ODgCgxM" },
+      { role: "Offertory", title: "Take Up Your Cross", composer: "Cortez", videoId: "HZboEnq9I4k" },
+      { role: "Communion", title: "The Supper of the Lord", composer: "Rosania", videoId: "z_WrU9oWqh0" },
+      { role: "Communion", title: "We Are Many Parts", composer: "Haugen", videoId: "q77uRQxKDCY" },
+      { role: "Recessional", title: "I Am the Bread of Life", composer: "Angrisano / Tom Booth", videoId: "Y845n-lXO4o" }
+    ],
+    optionalSongs: [
+      { title: "Somos El Cuerpo De Cristo", videoId: "9Vj_VYbbn_c" },
+      "Go to July"
+    ]
   }
 ];
 
@@ -149,18 +240,79 @@ const scrapedVideoReferences = [
   ["nWQu-7V8aLs", "Jesus Is Risen"],
   ["08Wk9Z_6mvQ", "I Am the Bread of Life"],
   ["F-5wRqmFDqI", "O God, You Search Me"],
-  ["g-_DmSdrQbI", "Regina Caeli"]
+  ["g-_DmSdrQbI", "Regina Caeli"],
+  ["MLsj73tAh7g", "Creator Spirit, By Whose Aid"],
+  ["3Jqlc69s4EA", "Come, O Holy Spirit"],
+  ["1Tgz9X8l3GM", "Holy Spirit, Come Now"],
+  ["iMpa11CUg0Q", "One Spirit, One Church"],
+  ["ntdcY8q7a9E", "Holy, Holy, Holy! Lord God Almighty! (Nicaea)"],
+  ["7jYgOQC82aU", "Eye Has Not Seen"],
+  ["08Wk9Z_6mvQ", "I Am the Bread of Life"],
+  ["0ytf_TIujPw", "Holy God, We Praise Thy Name"],
+  ["okAMb_ra8Uw", "Table of Plenty"],
+  ["xbrl2zWi3EA", "Corpus Christi Sequence"],
+  ["LIJ2MJMd_ks", "As Christ Is for Us"],
+  ["0XMGRUUFr0M", "Bread of Angels"],
+  ["-tg7539_wOE", "Miracle of Grace"],
+  ["Wh61poqcnpA", "Alleluia! Sing to Jesus"],
+  ["WtSnIxnIB3k", "Our God Is Here"],
+  ["nVesi-4A52w", "The Servant Song"],
+  ["TSk6NDRK44M", "Ubi Caritas"],
+  ["x93VMgWSPsg", "Ubi Caritas - Alejandro D. Consolacion II"],
+  ["oXP-FsNUWOc", "On Eagle's Wings"],
+  ["wwXtDuLFHJg", "With One Voice"],
+  ["kMcroYiXb7E", "In This Place"],
+  ["5BxarTJavmY", "In Every Age"],
+  ["2oSiX1WKg4w", "Be Not Afraid"],
+  ["XkvOnb2fsvU", "Take and Eat"],
+  ["akVBHThhmHk", "I Am Ever With You"],
+  ["pmOswvlS6CQ", "Rain Down"],
+  ["jiO3ODgCgxM", "Lift High the Cross"],
+  ["HZboEnq9I4k", "Take Up Your Cross"],
+  ["z_WrU9oWqh0", "The Supper of the Lord"],
+  ["q77uRQxKDCY", "We Are Many Parts"],
+  ["Y845n-lXO4o", "I Am the Bread of Life"],
+  ["9Vj_VYbbn_c", "We Are the Body of Christ"]
 ];
 
 const videoTitleById = new Map(scrapedVideoReferences);
 
+const galleryImages = [
+  { src: "assets/gallery/1000046063.jpg", alt: "St. Genevieve choir photo 1" },
+  { src: "assets/gallery/1000046064.jpg", alt: "St. Genevieve choir photo 2" },
+  { src: "assets/gallery/Resized_20251228_094553.jpeg", alt: "St. Genevieve choir photo 3" },
+  { src: "assets/gallery/Resized_20251228_094609.jpeg", alt: "St. Genevieve choir photo 4" },
+  { src: "assets/gallery/Resized_20251228_094613.jpeg", alt: "St. Genevieve choir photo 5" },
+  { src: "assets/gallery/imagejpeg_0%202.jpg", alt: "St. Genevieve choir photo 6" },
+  { src: "assets/gallery/imagejpeg_0.jpg", alt: "St. Genevieve choir photo 7" },
+  { src: "assets/gallery/converted/IMG_0602.jpg", alt: "St. Genevieve choir photo 8" },
+  { src: "assets/gallery/converted/IMG_6054.jpg", alt: "St. Genevieve choir photo 9" },
+  { src: "assets/gallery/converted/IMG_6055.jpg", alt: "St. Genevieve choir photo 10" },
+  { src: "assets/gallery/converted/IMG_6799.jpg", alt: "St. Genevieve choir photo 11" },
+  { src: "assets/gallery/converted/IMG_6800.jpg", alt: "St. Genevieve choir photo 12" },
+  { src: "assets/gallery/converted/IMG_6803.jpg", alt: "St. Genevieve choir photo 13" },
+  { src: "assets/gallery/converted/IMG_6804.jpg", alt: "St. Genevieve choir photo 14" }
+];
+
 const currentPlanEl = document.querySelector("#current-plan");
 const planListEl = document.querySelector("#plan-list");
+const archiveListEl = document.querySelector("#archive-list");
+const archivePanelEl = document.querySelector("#archive-panel");
+const archiveToggleEl = document.querySelector("#archive-toggle");
 const videoGridEl = document.querySelector("#video-grid");
+const galleryGridEl = document.querySelector("#gallery-grid");
+const galleryDialogEl = document.querySelector("#gallery-dialog");
+const galleryDialogImageEl = document.querySelector("#gallery-dialog-image");
+const galleryDialogCaptionEl = document.querySelector("#gallery-dialog-caption");
 
 let selectedPlan = getCurrentPlan(choirPlans, TODAY);
+let selectedGalleryIndex = 0;
+let galleryTouchStartX = 0;
 
 render();
+renderGallery();
+setupGalleryDialog();
+setupArchiveToggle();
 
 function render() {
   renderCurrentPlan(selectedPlan);
@@ -169,8 +321,8 @@ function render() {
 }
 
 function getCurrentPlan(plans, today) {
-  const upcoming = plans.find((plan) => new Date(`${plan.date}T23:59:59`) >= today);
-  return upcoming || plans[plans.length - 1];
+  const currentSunday = getCurrentSundayDateString(today);
+  return plans.find((plan) => plan.date >= currentSunday) || plans[plans.length - 1];
 }
 
 function renderCurrentPlan(plan) {
@@ -185,9 +337,18 @@ function renderCurrentPlan(plan) {
       </div>
       <div class="song-table" aria-label="${escapeHtml(plan.title)} song plan">
         ${plan.songs.map(renderSongRow).join("")}
+        ${plan.optionalSongs.map(renderOptionalSongRow).join("")}
       </div>
     </article>
   `;
+}
+
+function renderOptionalSongRow(optionalSong) {
+  const song = typeof optionalSong === "string"
+    ? { role: "Optional", title: optionalSong, composer: "", videoId: "" }
+    : { role: "Optional", composer: "", ...optionalSong };
+
+  return renderSongRow(song);
 }
 
 function renderSongRow(song) {
@@ -223,7 +384,29 @@ function renderPdfLinks(pdfLinks) {
 }
 
 function renderPlanList() {
-  planListEl.innerHTML = choirPlans.map((plan) => {
+  const currentSunday = getCurrentSundayDateString(TODAY);
+  const activePlans = choirPlans.filter((plan) => plan.date >= currentSunday);
+  const archivedPlans = choirPlans.filter((plan) => plan.date < currentSunday);
+
+  planListEl.innerHTML = activePlans.map(renderPlanCard).join("");
+  archiveListEl.innerHTML = archivedPlans.map(renderPlanCard).join("");
+
+  archiveToggleEl.hidden = archivedPlans.length === 0;
+  if (archivedPlans.length === 0) {
+    archivePanelEl.hidden = true;
+    archiveToggleEl.setAttribute("aria-expanded", "false");
+  }
+
+  document.querySelectorAll("[data-plan-date]").forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedPlan = choirPlans.find((plan) => plan.date === button.dataset.planDate);
+      render();
+      document.querySelector("#current-sunday").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
+function renderPlanCard(plan) {
     const isCurrent = plan.date === selectedPlan.date;
     const songPreview = plan.songs.slice(0, 4).map((song) => `<li>${escapeHtml(song.role)}: ${escapeHtml(song.title)}</li>`).join("");
 
@@ -237,14 +420,15 @@ function renderPlanList() {
         </button>
       </article>
     `;
-  }).join("");
+}
 
-  planListEl.querySelectorAll("[data-plan-date]").forEach((button) => {
-    button.addEventListener("click", () => {
-      selectedPlan = choirPlans.find((plan) => plan.date === button.dataset.planDate);
-      render();
-      document.querySelector("#current-sunday").scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+function setupArchiveToggle() {
+  archiveToggleEl.addEventListener("click", () => {
+    const shouldOpen = archivePanelEl.hidden;
+
+    archivePanelEl.hidden = !shouldOpen;
+    archiveToggleEl.setAttribute("aria-expanded", String(shouldOpen));
+    archiveToggleEl.textContent = shouldOpen ? "Hide archived plans" : "Show archived plans";
   });
 }
 
@@ -276,6 +460,93 @@ function renderVideos(plan) {
   videoGridEl.querySelectorAll("[data-video-id]").forEach((button) => {
     button.addEventListener("click", () => loadVideo(button));
   });
+}
+
+function renderGallery() {
+  galleryGridEl.innerHTML = galleryImages.map((image, index) => {
+    const caption = `Choir photo ${index + 1}`;
+
+    return `
+      <button
+        class="gallery-item"
+        type="button"
+        data-gallery-index="${index}"
+        aria-label="Open ${caption}"
+      >
+        <img src="${image.src}" alt="${escapeAttribute(image.alt)}" loading="lazy">
+        <span>${caption}</span>
+      </button>
+    `;
+  }).join("");
+
+  galleryGridEl.querySelectorAll("[data-gallery-index]").forEach((button) => {
+    button.addEventListener("click", () => openGalleryImage(Number.parseInt(button.dataset.galleryIndex, 10)));
+  });
+}
+
+function setupGalleryDialog() {
+  galleryDialogEl.querySelector(".dialog-close").addEventListener("click", () => {
+    galleryDialogEl.close();
+  });
+
+  galleryDialogEl.querySelectorAll("[data-gallery-direction]").forEach((button) => {
+    button.addEventListener("click", () => {
+      moveGallery(Number.parseInt(button.dataset.galleryDirection, 10));
+    });
+  });
+
+  galleryDialogEl.addEventListener("click", (event) => {
+    if (event.target === galleryDialogEl) {
+      galleryDialogEl.close();
+    }
+  });
+
+  galleryDialogEl.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      moveGallery(-1);
+    }
+
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      moveGallery(1);
+    }
+  });
+
+  galleryDialogImageEl.addEventListener("touchstart", (event) => {
+    galleryTouchStartX = event.changedTouches[0].clientX;
+  }, { passive: true });
+
+  galleryDialogImageEl.addEventListener("touchend", (event) => {
+    const distance = event.changedTouches[0].clientX - galleryTouchStartX;
+
+    if (Math.abs(distance) > 45) {
+      moveGallery(distance > 0 ? -1 : 1);
+    }
+  }, { passive: true });
+}
+
+function openGalleryImage(index) {
+  selectedGalleryIndex = index;
+  renderGalleryDialogImage();
+
+  if (typeof galleryDialogEl.showModal === "function") {
+    galleryDialogEl.showModal();
+  }
+}
+
+function moveGallery(direction) {
+  selectedGalleryIndex = (selectedGalleryIndex + direction + galleryImages.length) % galleryImages.length;
+  renderGalleryDialogImage();
+}
+
+function renderGalleryDialogImage() {
+  const image = galleryImages[selectedGalleryIndex];
+  const caption = `Choir photo ${selectedGalleryIndex + 1} of ${galleryImages.length}`;
+
+  galleryDialogImageEl.src = image.src;
+  galleryDialogImageEl.alt = image.alt;
+  galleryDialogCaptionEl.textContent = caption;
 }
 
 function getUniqueVideosForPlan(plan) {
@@ -333,6 +604,21 @@ function formatDate(dateString) {
     day: "numeric",
     year: "numeric"
   }).format(new Date(`${dateString}T12:00:00`));
+}
+
+function getCurrentSundayDateString(date) {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: SITE_TIME_ZONE,
+    weekday: "short",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(date).reduce((all, part) => ({ ...all, [part.type]: part.value }), {});
+  const weekdays = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+  const dayIndex = weekdays[parts.weekday];
+  const currentDay = Date.UTC(Number(parts.year), Number(parts.month) - 1, Number(parts.day));
+
+  return new Date(currentDay - dayIndex * 86400000).toISOString().slice(0, 10);
 }
 
 function escapeHtml(value) {
