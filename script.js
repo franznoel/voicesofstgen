@@ -303,6 +303,7 @@ const archiveListEl = document.querySelector("#archive-list");
 const archivePanelEl = document.querySelector("#archive-panel");
 const archiveToggleEl = document.querySelector("#archive-toggle");
 const videoGridEl = document.querySelector("#video-grid");
+const calendarListEl = document.querySelector("#calendar-list");
 const galleryGridEl = document.querySelector("#gallery-grid");
 const galleryDialogEl = document.querySelector("#gallery-dialog");
 const galleryDialogImageEl = document.querySelector("#gallery-dialog-image");
@@ -327,7 +328,9 @@ trackEvent("site_loaded", {
 function render() {
   renderCurrentPlan(selectedPlan);
   renderPlanList();
+  renderCalendar();
   renderVideos(selectedPlan);
+  setupPlanSelection();
 }
 
 function getCurrentPlan(plans, today) {
@@ -406,7 +409,9 @@ function renderPlanList() {
     archivePanelEl.hidden = true;
     archiveToggleEl.setAttribute("aria-expanded", "false");
   }
+}
 
+function setupPlanSelection() {
   document.querySelectorAll("[data-plan-date]").forEach((button) => {
     button.addEventListener("click", () => {
       selectedPlan = choirPlans.find((plan) => plan.date === button.dataset.planDate);
@@ -419,6 +424,36 @@ function renderPlanList() {
       document.querySelector("#current-sunday").scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
+}
+
+function renderCalendar() {
+  const currentSunday = getCurrentSundayDateString(TODAY);
+  const activePlans = choirPlans.filter((plan) => plan.date >= currentSunday);
+
+  calendarListEl.innerHTML = activePlans.map(renderCalendarEvent).join("");
+}
+
+function renderCalendarEvent(plan) {
+  const isCurrent = plan.date === selectedPlan.date;
+  const videos = getUniqueVideosForPlan(plan);
+  const pdfCount = plan.pdfLinks.length;
+
+  return `
+    <article class="calendar-event ${isCurrent ? "current" : ""}">
+      <div class="calendar-date" aria-hidden="true">
+        <span>${formatMonth(plan.date)}</span>
+        <strong>${formatDay(plan.date)}</strong>
+      </div>
+      <div class="calendar-event-body">
+        <time datetime="${plan.date}">${formatDate(plan.date)}</time>
+        <h3>${escapeHtml(plan.title)}</h3>
+        <p>8:30 AM Mass &middot; ${plan.songs.length} songs &middot; ${videos.length} practice videos &middot; ${pdfCount || "No"} PDF ${pdfCount === 1 ? "packet" : "packets"}</p>
+      </div>
+      <button class="select-plan calendar-select" type="button" data-plan-date="${plan.date}">
+        ${isCurrent ? "Viewing" : "View plan"}
+      </button>
+    </article>
+  `;
 }
 
 function renderPlanCard(plan) {
@@ -756,6 +791,18 @@ function formatDate(dateString) {
     month: "long",
     day: "numeric",
     year: "numeric"
+  }).format(new Date(`${dateString}T12:00:00`));
+}
+
+function formatMonth(dateString) {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short"
+  }).format(new Date(`${dateString}T12:00:00`));
+}
+
+function formatDay(dateString) {
+  return new Intl.DateTimeFormat("en-US", {
+    day: "2-digit"
   }).format(new Date(`${dateString}T12:00:00`));
 }
 
