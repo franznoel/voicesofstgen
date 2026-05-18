@@ -50,6 +50,24 @@ The current static data in `script.js` is shaped to be replaceable by Pang CMS l
 
 Practice videos are not embedded on initial page load. The page renders lightweight thumbnail buttons first, then creates a `youtube-nocookie.com` iframe only after a choir member presses play. This keeps the page usable even with many practice videos.
 
+## PostHog Dashboard
+
+The site uses the public PostHog project token in `index.html` for browser analytics. To create or refresh the PostHog dashboard, add a local `.env` file with a personal API key:
+
+```bash
+POSTHOG_API_KEY=phx_your_personal_api_key
+POSTHOG_HOST=https://us.posthog.com
+POSTHOG_PROJECT_ID=429363
+```
+
+Then run:
+
+```bash
+npm run posthog:create-dashboard
+```
+
+The script creates or reuses the `Voices of St. Gen Web Analytics` dashboard and adds tiles for visitors, pageviews, top pages, section clicks, video plays, PDF downloads, archive views, returning visitors, devices, browsers, and referrers.
+
 ## Notes
 
 This first version is public and static. It is intended for St. Genevieve Choir use, with the first audience being the 8:30 AM Sunday Mass choir.

@@ -1,6 +1,7 @@
 const TODAY = new Date();
 const SITE_TIME_ZONE = "America/Los_Angeles";
 const isProductionHost = !["localhost", "127.0.0.1"].includes(window.location.hostname);
+const isReturningVisitor = getReturningVisitorStatus();
 
 const choirPlans = [
   {
@@ -442,10 +443,12 @@ function setupArchiveToggle() {
     archivePanelEl.hidden = !shouldOpen;
     archiveToggleEl.setAttribute("aria-expanded", String(shouldOpen));
     archiveToggleEl.textContent = shouldOpen ? "Hide archived plans" : "Show archived plans";
-    trackEvent("archive_toggled", {
-      opened: shouldOpen,
-      archived_plan_count: archiveListEl.querySelectorAll(".plan-card").length
-    });
+
+    if (shouldOpen) {
+      trackEvent("view_archive", {
+        archived_plan_count: archiveListEl.querySelectorAll(".plan-card").length
+      });
+    }
   });
 }
 
@@ -546,7 +549,7 @@ function setupGalleryDialog() {
 function openGalleryImage(index) {
   selectedGalleryIndex = index;
   renderGalleryDialogImage();
-  trackEvent("gallery_opened", getGalleryEventProperties("thumbnail"));
+  trackEvent("open_gallery", getGalleryEventProperties("thumbnail"));
 
   if (typeof galleryDialogEl.showModal === "function") {
     galleryDialogEl.showModal();
@@ -619,7 +622,7 @@ function loadVideo(button) {
   const videoId = button.dataset.videoId;
   const title = button.dataset.videoTitle;
 
-  trackEvent("video_loaded", {
+  trackEvent("play_practice_video", {
     video_id: videoId,
     video_title: title,
     plan_date: selectedPlan.date,
@@ -642,9 +645,13 @@ function setupGlobalAnalytics() {
   document.addEventListener("click", (event) => {
     const pdfLink = event.target.closest(".pdf-links a");
     const footerLink = event.target.closest(".site-footer a");
+    const currentSundayLink = event.target.closest('a[href="#current-sunday"]');
+    const videosLink = event.target.closest('a[href="#practice-videos"]');
+    const galleryLink = event.target.closest('a[href="#gallery"]');
+    const calendarLink = event.target.closest('a[href="#calendar"]');
 
     if (pdfLink) {
-      trackEvent("pdf_clicked", {
+      trackEvent("download_pdf_packet", {
         label: pdfLink.textContent.trim(),
         url: pdfLink.href,
         plan_date: selectedPlan.date,
@@ -655,6 +662,36 @@ function setupGlobalAnalytics() {
     if (footerLink) {
       trackEvent("church_link_clicked", {
         url: footerLink.href
+      });
+    }
+
+    if (currentSundayLink) {
+      if (currentSundayLink.classList.contains("primary")) {
+        trackEvent("view_current_sunday", {
+          source: "hero"
+        });
+      } else {
+        trackEvent("open_songs", {
+          source: currentSundayLink.classList.contains("skip-link") ? "skip_link" : "navigation"
+        });
+      }
+    }
+
+    if (videosLink) {
+      trackEvent("open_videos", {
+        source: videosLink.classList.contains("secondary") ? "hero" : "navigation"
+      });
+    }
+
+    if (galleryLink) {
+      trackEvent("open_gallery", {
+        source: "navigation"
+      });
+    }
+
+    if (calendarLink) {
+      trackEvent("open_calendar", {
+        source: "navigation"
       });
     }
   });
@@ -690,8 +727,21 @@ function trackEvent(eventName, properties = {}) {
     site: "voicesofstgen",
     current_plan_date: selectedPlan?.date,
     current_plan_title: selectedPlan?.title,
+    returning_visitor: isReturningVisitor,
     ...properties
   });
+}
+
+function getReturningVisitorStatus() {
+  const storageKey = "voicesofstgen_seen";
+
+  try {
+    const hasVisited = window.localStorage.getItem(storageKey) === "true";
+    window.localStorage.setItem(storageKey, "true");
+    return hasVisited;
+  } catch {
+    return false;
+  }
 }
 
 function formatDate(dateString) {
