@@ -32,8 +32,9 @@ jobs:
           path: data/stgenchoir-scrape.json
 
       - name: Commit updated scrape
+        if: github.event_name == 'workflow_dispatch'
         run: |
-          if git diff --quiet -- data/stgenchoir-scrape.json; then
+          if [ -z "$(git status --porcelain -- data/stgenchoir-scrape.json)" ]; then
             echo "No scrape changes to commit."
             exit 0
           fi
@@ -43,3 +44,5 @@ jobs:
           git add data/stgenchoir-scrape.json
           git commit -m "Update Google Site scrape"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

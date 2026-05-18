@@ -63,7 +63,7 @@ See [docs/posthog.md](docs/posthog.md) for setup, event names, and troubleshooti
 
 ## Google Site Scraping
 
-The repo includes a GitHub Actions workflow that scrapes the source Google Site daily and on manual dispatch. It saves the snapshot to `data/stgenchoir-scrape.json` when the result changes.
+The repo includes a GitHub Actions workflow that scrapes the source Google Site hourly and on manual dispatch. Manual runs can save the snapshot to `data/stgenchoir-scrape.json` when the result changes.
 
 See [docs/scraping.md](docs/scraping.md) for the schedule, local command, and limitations.
 

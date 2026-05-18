@@ -35,7 +35,7 @@ The workflow at `.github/workflows/scrape-google-site.yml` runs:
 - manually through `workflow_dispatch`
 - hourly
 
-After scraping, the workflow uploads `data/stgenchoir-scrape.json` as an artifact and commits the file back to the repo only when the scrape result changes.
+After scraping, every run uploads `data/stgenchoir-scrape.json` as an artifact. Manual runs also commit the file back to the repo when the scrape result changes; hourly scheduled runs are artifact-only to avoid noisy bot commits and deployments.
 
 ## Limitations
 

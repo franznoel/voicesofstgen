@@ -4,7 +4,7 @@
   "counts": {
     "youtubeVideos": 65,
     "driveLinks": 10,
-    "pdfLinks": 10
+    "pdfLinks": 0
   },
   "pages": [
     {
@@ -169,14 +169,7 @@
           "url": "https://drive.google.com/file/d/1gre-KriAwqTGnd1HRKXdCSAWwZ1J-qqa/view"
         }
       ],
-      "pdfLinks": [
-        {
-          "url": "https://drive.google.com/file/d/1W4kGltRFsW3AyEReumYG8uN3qxwRMdjV/view"
-        },
-        {
-          "url": "https://drive.google.com/file/d/1gre-KriAwqTGnd1HRKXdCSAWwZ1J-qqa/view"
-        }
-      ],
+      "pdfLinks": [],
       "internalLinks": [
         "https://sites.google.com/view/stgenchoir/pentecost",
         "https://sites.google.com/view/stgenchoir/easter-a",
@@ -388,14 +381,7 @@
           "url": "https://drive.google.com/file/d/1gre-KriAwqTGnd1HRKXdCSAWwZ1J-qqa/view"
         }
       ],
-      "pdfLinks": [
-        {
-          "url": "https://drive.google.com/file/d/1W4kGltRFsW3AyEReumYG8uN3qxwRMdjV/view"
-        },
-        {
-          "url": "https://drive.google.com/file/d/1gre-KriAwqTGnd1HRKXdCSAWwZ1J-qqa/view"
-        }
-      ],
+      "pdfLinks": [],
       "internalLinks": [
         "https://sites.google.com/view/stgenchoir/pentecost",
         "https://sites.google.com/view/stgenchoir/easter-a",
@@ -609,32 +595,7 @@
           "url": "https://drive.google.com/file/d/1JV8O3Q9ejcscIQ7pvejZXuIrvlGrB4QY/view"
         }
       ],
-      "pdfLinks": [
-        {
-          "url": "https://drive.google.com/file/d/1iLNxXnA5S2P2LCrlJGSfcz_pHrpaxpXA/view"
-        },
-        {
-          "url": "https://drive.google.com/file/d/1NekrbhijCbAZ4qK3WqdLPehF_kKQr-mU/view"
-        },
-        {
-          "url": "https://drive.google.com/file/d/1CYP6Lgd8Mr4jGC8ox0LU8OJpJazqrsNp/view"
-        },
-        {
-          "url": "https://drive.google.com/file/d/1PkeHkJ4MEyR28vK_nlGyuzW5i3PvIvtK/view"
-        },
-        {
-          "url": "https://drive.google.com/file/d/1rnuKNkqqpLlyJX1c49y6uY5Tf5blfg8B/view"
-        },
-        {
-          "url": "https://drive.google.com/file/d/109OHhIk5q4lm1flF3AhPHN9-GTcG2vkk/view"
-        },
-        {
-          "url": "https://drive.google.com/file/d/17VWCD7sVsHm9n3VxKP-IFZ6QRHUGto_M/view"
-        },
-        {
-          "url": "https://drive.google.com/file/d/1JV8O3Q9ejcscIQ7pvejZXuIrvlGrB4QY/view"
-        }
-      ],
+      "pdfLinks": [],
       "internalLinks": [
         "https://sites.google.com/view/stgenchoir/pentecost",
         "https://sites.google.com/view/stgenchoir/easter-a",

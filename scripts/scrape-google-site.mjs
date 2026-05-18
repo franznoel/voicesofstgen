@@ -66,7 +66,7 @@ async function scrapePage(url) {
     .filter((link) => new URL(link).hostname.endsWith("drive.google.com"))
     .map((link) => ({ url: link }));
   const pdfLinks = externalLinks
-    .filter((link) => link.toLowerCase().includes(".pdf") || link.includes("drive.google.com"))
+    .filter(isPdfUrl)
     .map((link) => ({ url: link }));
 
   return {
@@ -189,6 +189,15 @@ function unwrapGoogleRedirect(url) {
   }
 
   return url;
+}
+
+function isPdfUrl(url) {
+  try {
+    const parsed = new URL(url);
+    return parsed.pathname.toLowerCase().endsWith(".pdf");
+  } catch {
+    return false;
+  }
 }
 
 function isSitePage(url) {
