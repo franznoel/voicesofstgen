@@ -52,21 +52,14 @@ Practice videos are not embedded on initial page load. The page renders lightwei
 
 ## PostHog Dashboard
 
-The site uses the public PostHog project token in `index.html` for browser analytics. To create or refresh the PostHog dashboard, add a local `.env` file with a personal API key:
+The site uses PostHog for pageviews, section clicks, video plays, PDF downloads, gallery opens, archive views, device/browser breakdowns, and referrers.
 
-```bash
-POSTHOG_API_KEY=phx_your_personal_api_key
-POSTHOG_HOST=https://us.posthog.com
-POSTHOG_PROJECT_ID=429363
-```
+To create or refresh the PostHog dashboard:
 
-Then run:
+1. Add a local `.env` file with a personal PostHog API key.
+2. Run `npm run posthog:create-dashboard`.
 
-```bash
-npm run posthog:create-dashboard
-```
-
-The script creates or reuses the `Voices of St. Gen Web Analytics` dashboard and adds tiles for visitors, pageviews, top pages, section clicks, video plays, PDF downloads, archive views, returning visitors, devices, browsers, and referrers.
+See [docs/posthog.md](docs/posthog.md) for setup, event names, and troubleshooting.
 
 ## Notes
 

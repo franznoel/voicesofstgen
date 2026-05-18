@@ -1,6 +1,7 @@
 const TODAY = new Date();
 const SITE_TIME_ZONE = "America/Los_Angeles";
-const isProductionHost = !["localhost", "127.0.0.1"].includes(window.location.hostname);
+const PRODUCTION_HOSTS = new Set(["voicesofstgen.com", "www.voicesofstgen.com"]);
+const isProductionHost = PRODUCTION_HOSTS.has(window.location.hostname);
 const isReturningVisitor = getReturningVisitorStatus();
 
 const choirPlans = [
@@ -643,12 +644,17 @@ function loadVideo(button) {
 
 function setupGlobalAnalytics() {
   document.addEventListener("click", (event) => {
-    const pdfLink = event.target.closest(".pdf-links a");
-    const footerLink = event.target.closest(".site-footer a");
-    const currentSundayLink = event.target.closest('a[href="#current-sunday"]');
-    const videosLink = event.target.closest('a[href="#practice-videos"]');
-    const galleryLink = event.target.closest('a[href="#gallery"]');
-    const calendarLink = event.target.closest('a[href="#calendar"]');
+    if (!(event.target instanceof Element)) {
+      return;
+    }
+
+    const target = event.target;
+    const pdfLink = target.closest(".pdf-links a");
+    const footerLink = target.closest(".site-footer a");
+    const currentSundayLink = target.closest('a[href="#current-sunday"]');
+    const videosLink = target.closest('a[href="#practice-videos"]');
+    const galleryLink = target.closest('a[href="#gallery"]');
+    const calendarLink = target.closest('a[href="#calendar"]');
 
     if (pdfLink) {
       trackEvent("download_pdf_packet", {
