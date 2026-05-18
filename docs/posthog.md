@@ -80,16 +80,50 @@ returning_visitor
 
 Video and PDF events include extra details such as video ID, video title, PDF label, URL, and plan information.
 
-## Localhost Behavior
+## Session Replay
 
-PostHog capture is disabled on:
+Session Replay is configured in `index.html` as part of `posthog.init`.
 
-```text
-localhost
-127.0.0.1
+Current replay settings:
+
+```js
+disable_session_recording: false,
+session_recording: {
+  maskAllInputs: true,
+  maskTextSelector: ".sensitive, [data-private]",
+  blockSelector: "[data-ph-no-capture]"
+}
 ```
 
-This keeps local development from polluting production analytics.
+PostHog only initializes on the production domains:
+
+```text
+voicesofstgen.com
+www.voicesofstgen.com
+```
+
+That means local development and preview hosts do not send replay data.
+
+To finish enabling Session Replay:
+
+1. Open the PostHog project.
+2. Go to **Settings**.
+3. Open **Session replay**.
+4. Make sure recording is enabled for the project.
+5. Visit `https://voicesofstgen.com/` and check **Activity > Replays** after a short delay.
+
+Use `data-ph-no-capture` on any element that should be excluded from replay capture later. Use `data-private` or the `sensitive` class for text that should be masked.
+
+## Localhost Behavior
+
+PostHog capture is disabled anywhere outside:
+
+```text
+voicesofstgen.com
+www.voicesofstgen.com
+```
+
+This keeps local development, LAN hosts, and preview deployments from polluting production analytics or session replays.
 
 ## Troubleshooting
 

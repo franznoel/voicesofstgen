@@ -61,6 +61,12 @@ To create or refresh the PostHog dashboard:
 
 See [docs/posthog.md](docs/posthog.md) for setup, event names, and troubleshooting.
 
+## Google Site Scraping
+
+The repo includes a GitHub Actions workflow that scrapes the source Google Site daily and on manual dispatch. It saves the snapshot to `data/stgenchoir-scrape.json` when the result changes.
+
+See [docs/scraping.md](docs/scraping.md) for the schedule, local command, and limitations.
+
 ## Notes
 
 This first version is public and static. It is intended for St. Genevieve Choir use, with the first audience being the 8:30 AM Sunday Mass choir.
