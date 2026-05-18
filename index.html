@@ -27,6 +27,7 @@
         <div class="nav-links">
           <a href="#current-sunday">Songs</a>
           <a href="#practice-videos">Videos</a>
+          <a href="#gallery">Gallery</a>
           <a href="#calendar">Calendar</a>
         </div>
       </nav>
@@ -61,10 +62,23 @@
 
       <section class="section">
         <div class="section-heading">
-          <p class="eyebrow">Season archive</p>
-          <h2>All Sunday plans</h2>
+          <p class="eyebrow">Planning ahead</p>
+          <h2>Upcoming Sunday plans</h2>
+          <p>Showing the current Sunday and future dates based on Pacific time.</p>
         </div>
         <div id="plan-list" class="plan-list"></div>
+        <div class="archive-controls">
+          <button id="archive-toggle" class="archive-toggle" type="button" aria-expanded="false" aria-controls="archive-panel">
+            Show archived plans
+          </button>
+        </div>
+        <div id="archive-panel" class="archive-panel" hidden>
+          <div class="section-heading compact-heading">
+            <p class="eyebrow">Previous Sundays</p>
+            <h2>Archive</h2>
+          </div>
+          <div id="archive-list" class="plan-list"></div>
+        </div>
       </section>
 
       <section id="practice-videos" class="section video-section">
@@ -77,6 +91,15 @@
           </p>
         </div>
         <div id="video-grid" class="video-grid"></div>
+      </section>
+
+      <section id="gallery" class="section gallery-section">
+        <div class="section-heading">
+          <p class="eyebrow">Choir life</p>
+          <h2>Gallery</h2>
+          <p>Recent St. Genevieve choir photos.</p>
+        </div>
+        <div id="gallery-grid" class="gallery-grid"></div>
       </section>
 
       <section id="calendar" class="section calendar-section">
@@ -93,6 +116,16 @@
         </div>
       </section>
     </main>
+
+    <dialog id="gallery-dialog" class="gallery-dialog" aria-label="Gallery photo preview">
+      <button class="dialog-close" type="button" aria-label="Close gallery preview">Close</button>
+      <div class="gallery-viewer">
+        <button class="gallery-nav previous" type="button" data-gallery-direction="-1" aria-label="Previous photo">Previous</button>
+        <img id="gallery-dialog-image" src="" alt="">
+        <button class="gallery-nav next" type="button" data-gallery-direction="1" aria-label="Next photo">Next</button>
+      </div>
+      <p id="gallery-dialog-caption"></p>
+    </dialog>
 
     <footer class="site-footer">
       <p>Voices of St. Gen is a simple practice hub for the 8:30 AM choir.</p>
