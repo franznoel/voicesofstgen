@@ -7,8 +7,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "check": "node --check server.js && node --check script.js && node --check scripts/create-posthog-dashboard.mjs",
-    "posthog:create-dashboard": "node scripts/create-posthog-dashboard.mjs"
+    "check": "node --check server.js && node --check script.js && node --check scripts/create-posthog-dashboard.mjs && node --check scripts/scrape-google-site.mjs",
+    "posthog:create-dashboard": "node scripts/create-posthog-dashboard.mjs",
+    "scrape:google-site": "node scripts/scrape-google-site.mjs"
   },
   "engines": {
     "node": ">=18"

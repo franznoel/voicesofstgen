@@ -1,0 +1,48 @@
+name: Scrape Google Site
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Runs hourly. GitHub cron uses UTC.
+    - cron: "0 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Scrape St. Gen Choir Google Site
+        run: npm run scrape:google-site
+
+      - name: Upload scrape artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stgenchoir-scrape
+          path: data/stgenchoir-scrape.json
+
+      - name: Commit updated scrape
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          if [ -z "$(git status --porcelain -- data/stgenchoir-scrape.json)" ]; then
+            echo "No scrape changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/stgenchoir-scrape.json
+          git commit -m "Update Google Site scrape"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
