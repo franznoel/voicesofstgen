@@ -334,8 +334,11 @@ function render() {
 }
 
 function getCurrentPlan(plans, today) {
-  const currentSunday = getCurrentSundayDateString(today);
-  return plans.find((plan) => plan.date >= currentSunday) || plans[plans.length - 1];
+  const activePlanCutoffDate = getActivePlanCutoffDateString(today);
+  return (
+    plans.find((plan) => plan.date >= activePlanCutoffDate) ||
+    plans[plans.length - 1]
+  );
 }
 
 function renderCurrentPlan(plan) {
@@ -397,9 +400,13 @@ function renderPdfLinks(pdfLinks) {
 }
 
 function renderPlanList() {
-  const currentSunday = getCurrentSundayDateString(TODAY);
-  const activePlans = choirPlans.filter((plan) => plan.date >= currentSunday);
-  const archivedPlans = choirPlans.filter((plan) => plan.date < currentSunday);
+  const activePlanCutoffDate = getActivePlanCutoffDateString(TODAY);
+  const activePlans = choirPlans.filter(
+    (plan) => plan.date >= activePlanCutoffDate,
+  );
+  const archivedPlans = choirPlans.filter(
+    (plan) => plan.date < activePlanCutoffDate,
+  );
 
   planListEl.innerHTML = activePlans.map(renderPlanCard).join("");
   archiveListEl.innerHTML = archivedPlans.map(renderPlanCard).join("");
@@ -418,7 +425,7 @@ function setupPlanSelection() {
       trackEvent("plan_selected", {
         plan_date: selectedPlan.date,
         plan_title: selectedPlan.title,
-        is_archived: selectedPlan.date < getCurrentSundayDateString(TODAY)
+        is_archived: selectedPlan.date < getActivePlanCutoffDateString(TODAY),
       });
       render();
       document.querySelector("#current-sunday").scrollIntoView({ behavior: "smooth", block: "start" });
@@ -427,8 +434,10 @@ function setupPlanSelection() {
 }
 
 function renderCalendar() {
-  const currentSunday = getCurrentSundayDateString(TODAY);
-  const activePlans = choirPlans.filter((plan) => plan.date >= currentSunday);
+  const activePlanCutoffDate = getActivePlanCutoffDateString(TODAY);
+  const activePlans = choirPlans.filter(
+    (plan) => plan.date >= activePlanCutoffDate,
+  );
 
   calendarListEl.innerHTML = activePlans.map(renderCalendarEvent).join("");
 }
@@ -819,6 +828,19 @@ function getCurrentSundayDateString(date) {
   const currentDay = Date.UTC(Number(parts.year), Number(parts.month) - 1, Number(parts.day));
 
   return new Date(currentDay - dayIndex * 86400000).toISOString().slice(0, 10);
+}
+
+function getActivePlanCutoffDateString(date) {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: SITE_TIME_ZONE,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  })
+    .formatToParts(date)
+    .reduce((all, part) => ({...all, [part.type]: part.value}), {});
+
+  return `${parts.year}-${parts.month}-${parts.day}`;
 }
 
 function escapeHtml(value) {
