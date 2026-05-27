@@ -28,7 +28,9 @@ PORT=3000 npm start
 
 - `index.html` - page structure and content containers.
 - `styles.css` - responsive layout and visual styling.
-- `script.js` - temporary static song data and rendering logic.
+- `script.js` - rendering logic, gallery behavior, and analytics.
+- `data/choir-plans.fallback.js` - hand-curated Sunday plan fallback data.
+- `data/choir-plans.generated.js` - generated Sunday plan data with conservative PDF-link updates.
 - `server.js` - small dependency-free Node static server.
 - `package.json` - local scripts for running and checking the site.
 
@@ -65,7 +67,7 @@ See [docs/posthog.md](docs/posthog.md) for setup, event names, and troubleshooti
 
 The repo includes a GitHub Actions workflow that scrapes the source Google Site hourly and on manual dispatch. Manual runs can save the snapshot to `data/stgenchoir-scrape.json` when the result changes.
 
-See [docs/scraping.md](docs/scraping.md) for the schedule, local command, and limitations.
+The generated Sunday plan path updates PDF packet links only and preserves curated song/video fields. See [docs/scraping.md](docs/scraping.md) for the schedule, local commands, reports, and limitations.
 
 ## Notes
 

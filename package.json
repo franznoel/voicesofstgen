@@ -7,8 +7,10 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "check": "node --check server.js && node --check script.js && node --check scripts/create-posthog-dashboard.mjs && node --check scripts/scrape-google-site.mjs",
+    "check": "node --check server.js && node --check script.js && node --check scripts/create-posthog-dashboard.mjs && node --check scripts/scrape-google-site.mjs && node --check scripts/generate-choir-plan-pdfs.mjs && node --test",
     "posthog:create-dashboard": "node scripts/create-posthog-dashboard.mjs",
+    "generate:choir-plan-pdfs": "node scripts/generate-choir-plan-pdfs.mjs --write",
+    "report:choir-plan-pdfs": "node scripts/generate-choir-plan-pdfs.mjs",
     "scrape:google-site": "node scripts/scrape-google-site.mjs"
   },
   "engines": {
