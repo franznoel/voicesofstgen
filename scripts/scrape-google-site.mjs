@@ -63,12 +63,12 @@ async function scrapePage(url) {
   const linkDetails = extractLinkDetails(html, url);
   const internalLinks = unique(links.filter(isSitePage).map(normalizeUrl));
   const externalLinks = unique(links.filter((link) => !isSitePage(link)).map(normalizeUrl));
-  const driveLinks = uniqueLinkDetails(linkDetails
+  const driveLinks = linkDetails
     .filter((link) => !isSitePage(link.url))
-    .filter((link) => new URL(link.url).hostname.endsWith("drive.google.com")));
-  const pdfLinks = uniqueLinkDetails(linkDetails
+    .filter((link) => new URL(link.url).hostname.endsWith("drive.google.com"));
+  const pdfLinks = linkDetails
     .filter((link) => !isSitePage(link.url))
-    .filter((link) => isPdfUrl(link.url)));
+    .filter((link) => isPdfUrl(link.url));
 
   return {
     url,

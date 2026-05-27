@@ -6,7 +6,7 @@ const isReturningVisitor = getReturningVisitorStatus();
 
 const fallbackChoirPlans = getPlanDataFromWindow("CHOIR_PLANS_FALLBACK");
 const generatedChoirPlans = getPlanDataFromWindow("CHOIR_PLANS_GENERATED");
-const choirPlans = generatedChoirPlans || fallbackChoirPlans;
+const choirPlans = generatedChoirPlans || fallbackChoirPlans || failMissingPlanData();
 
 const scrapedVideoReferences = [
   ["Wh61poqcnpA", "Alleluia! Sing to Jesus"],
@@ -158,6 +158,10 @@ function getPlanDataFromWindow(key) {
   ));
 
   return hasValidShape ? plans : null;
+}
+
+function failMissingPlanData() {
+  throw new Error("Voices of St. Gen could not load generated or fallback choir plan data.");
 }
 
 function renderCurrentPlan(plan) {

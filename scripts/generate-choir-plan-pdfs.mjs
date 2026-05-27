@@ -1,5 +1,6 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
+import { pathToFileURL } from "node:url";
 import vm from "node:vm";
 
 const DEFAULT_SCRAPE_PATH = "data/stgenchoir-scrape.json";
@@ -9,8 +10,9 @@ const DEFAULT_REPORT_PATH = "data/choir-plan-pdf-report.json";
 
 const args = new Set(process.argv.slice(2));
 const shouldWrite = args.has("--write");
+const isDirectExecution = process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href;
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (isDirectExecution) {
   const result = await runGenerator({
     scrapePath: process.env.SCRAPE_INPUT || DEFAULT_SCRAPE_PATH,
     fallbackPath: process.env.CHOIR_PLANS_FALLBACK || DEFAULT_FALLBACK_PATH,
