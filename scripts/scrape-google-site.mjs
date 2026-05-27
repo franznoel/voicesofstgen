@@ -60,14 +60,15 @@ async function scrapePage(url) {
 
   const html = await response.text();
   const links = extractLinks(html, url);
+  const linkDetails = extractLinkDetails(html, url);
   const internalLinks = unique(links.filter(isSitePage).map(normalizeUrl));
   const externalLinks = unique(links.filter((link) => !isSitePage(link)).map(normalizeUrl));
-  const driveLinks = externalLinks
-    .filter((link) => new URL(link).hostname.endsWith("drive.google.com"))
-    .map((link) => ({ url: link }));
-  const pdfLinks = externalLinks
-    .filter(isPdfUrl)
-    .map((link) => ({ url: link }));
+  const driveLinks = linkDetails
+    .filter((link) => !isSitePage(link.url))
+    .filter((link) => new URL(link.url).hostname.endsWith("drive.google.com"));
+  const pdfLinks = linkDetails
+    .filter((link) => !isSitePage(link.url))
+    .filter((link) => isPdfUrl(link.url));
 
   return {
     url,
@@ -96,6 +97,52 @@ function extractLinks(html, baseUrl) {
   }
 
   return unique(links);
+}
+
+function extractLinkDetails(html, baseUrl) {
+  const links = [];
+  const anchorPattern = /<a\b[^>]*\bhref=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
+  const attributePattern = /\b(?:href|src)=["']([^"']+)["']/gi;
+  let match;
+
+  while ((match = anchorPattern.exec(html))) {
+    const href = decodeHtml(match[1]);
+    const resolved = resolveUrl(href, baseUrl);
+
+    if (!resolved) {
+      continue;
+    }
+
+    links.push({
+      url: normalizeUrl(unwrapGoogleRedirect(resolved)),
+      text: normalizeWhitespace(decodeHtml(stripTags(match[2]))),
+      context: getTextContext(html, match.index, match[0].length)
+    });
+  }
+
+  while ((match = attributePattern.exec(html))) {
+    const href = decodeHtml(match[1]);
+    const resolved = resolveUrl(href, baseUrl);
+
+    if (!resolved) {
+      continue;
+    }
+
+    links.push({
+      url: normalizeUrl(unwrapGoogleRedirect(resolved)),
+      text: "",
+      context: getTextContext(html, match.index, match[0].length)
+    });
+  }
+
+  return uniqueLinkDetails(links);
+}
+
+function getTextContext(html, start, length) {
+  const contextStart = Math.max(0, start - 600);
+  const contextEnd = Math.min(html.length, start + length + 600);
+
+  return normalizeWhitespace(decodeHtml(stripTags(html.slice(contextStart, contextEnd))));
 }
 
 function extractTitle(html) {
@@ -240,4 +287,28 @@ function normalizeWhitespace(value) {
 
 function unique(values) {
   return [...new Set(values)];
+}
+
+function uniqueLinkDetails(links) {
+  const byKey = new Map();
+
+  for (const link of links) {
+    const key = link.url;
+    const existing = byKey.get(key);
+
+    if (!existing) {
+      byKey.set(key, link);
+      continue;
+    }
+
+    if (!existing.text && link.text) {
+      existing.text = link.text;
+    }
+
+    if (!existing.context && link.context) {
+      existing.context = link.context;
+    }
+  }
+
+  return [...byKey.values()];
 }

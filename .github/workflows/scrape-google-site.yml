@@ -25,24 +25,38 @@ jobs:
       - name: Scrape St. Gen Choir Google Site
         run: npm run scrape:google-site
 
+      - name: Check generated choir plan PDF links
+        if: github.event_name != 'workflow_dispatch'
+        run: npm run report:choir-plan-pdfs
+
+      - name: Generate choir plan PDF links
+        if: github.event_name == 'workflow_dispatch'
+        run: npm run generate:choir-plan-pdfs
+
       - name: Upload scrape artifact
         uses: actions/upload-artifact@v4
         with:
           name: stgenchoir-scrape
           path: data/stgenchoir-scrape.json
 
+      - name: Upload choir plan PDF report
+        uses: actions/upload-artifact@v4
+        with:
+          name: choir-plan-pdf-report
+          path: data/choir-plan-pdf-report.json
+
       - name: Commit updated scrape
         if: github.event_name == 'workflow_dispatch'
         run: |
-          if [ -z "$(git status --porcelain -- data/stgenchoir-scrape.json)" ]; then
-            echo "No scrape changes to commit."
+          if [ -z "$(git status --porcelain -- data/stgenchoir-scrape.json data/choir-plans.generated.js)" ]; then
+            echo "No scrape or generated plan changes to commit."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/stgenchoir-scrape.json
-          git commit -m "Update Google Site scrape"
+          git add data/stgenchoir-scrape.json data/choir-plans.generated.js
+          git commit -m "Update Google Site scrape and generated plans"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
