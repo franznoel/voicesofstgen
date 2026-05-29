@@ -472,7 +472,12 @@ window.CHOIR_PLANS_GENERATED = [
   {
     "date": "2026-06-14",
     "title": "Eleventh Sunday in Ordinary Time (A)",
-    "pdfLinks": [],
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1yoeqq2JlF__AZPZXt73MHT-rcMl1e_0i/view?usp=sharing"
+      }
+    ],
     "songs": [
       {
         "role": "Note",
@@ -524,7 +529,7 @@ window.CHOIR_PLANS_GENERATED = [
     "pdfLinks": [
       {
         "label": "All PDFs",
-        "url": "https://drive.google.com/file/d/1W4kGltRFsW3AyEReumYG8uN3qxwRMdjV/view?usp=sharing"
+        "url": "https://drive.google.com/file/d/1qtT2ALZgYmatnlJ0JJRKj0TYT1wqzZad/view?usp=sharing"
       }
     ],
     "songs": [
@@ -570,7 +575,12 @@ window.CHOIR_PLANS_GENERATED = [
   {
     "date": "2026-06-28",
     "title": "Thirteenth Sunday in Ordinary Time (A)",
-    "pdfLinks": [],
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1W4kGltRFsW3AyEReumYG8uN3qxwRMdjV/view?usp=sharing"
+      }
+    ],
     "songs": [
       {
         "role": "Entrance",

@@ -145,6 +145,39 @@ test("matches a PDF link by readable text order when Google Sites hides date con
   assert.equal(report.warnings.length, 0);
 });
 
+test("keeps fallback link order aligned when some links already match by context", () => {
+  const scrape = {
+    pages: [
+      {
+        title: "Mixed matching",
+        text: "The Most Holy Trinity May 31, 2025 All PDFs June 07, 2026 The Most Holy Body and Blood of Christ (A) ALL PDFs",
+        driveLinks: [
+          {
+            url: "https://drive.google.com/file/d/trinity-order/view",
+            text: "All PDFs",
+            context: "All PDFs Entrance"
+          },
+          {
+            url: "https://drive.google.com/file/d/body-blood-context/view",
+            text: "ALL PDFs",
+            context: "June 07, 2026 The Most Holy Body and Blood of Christ (A) ALL PDFs"
+          }
+        ],
+        pdfLinks: []
+      }
+    ]
+  };
+
+  const { plans } = generatePlansWithPdfLinks(fallbackPlans, scrape);
+
+  assert.deepEqual(plans.find((plan) => plan.date === "2026-05-31").pdfLinks, [
+    { label: "All PDFs", url: "https://drive.google.com/file/d/trinity-order/view?usp=sharing" }
+  ]);
+  assert.deepEqual(plans.find((plan) => plan.date === "2026-06-07").pdfLinks, [
+    { label: "All PDFs", url: "https://drive.google.com/file/d/body-blood-context/view?usp=sharing" }
+  ]);
+});
+
 test("formatted generated output is stable for idempotent comparisons", () => {
   const output = formatPlanData("CHOIR_PLANS_GENERATED", fallbackPlans);
 
