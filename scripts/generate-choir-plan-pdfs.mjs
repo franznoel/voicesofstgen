@@ -113,6 +113,8 @@ export function collectPdfCandidatesByDate(plans, scrape, report = { warnings: [
   for (const page of scrape.pages || []) {
     const links = getPagePdfLinks(page);
     const unmatchedLinks = [];
+    const fallbackMatches = matchLinksByReadableTextOrder(page, links, planDateMatchers);
+    const fallbackByUrl = new Map(fallbackMatches.map((match) => [match.link.url, match]));
 
     for (const link of links) {
       const evidence = `${link.text || ""} ${link.context || ""}`;
@@ -131,18 +133,21 @@ export function collectPdfCandidatesByDate(plans, scrape, report = { warnings: [
       });
     }
 
-    const fallbackMatches = matchLinksByReadableTextOrder(page, unmatchedLinks.map(({ link }) => link), planDateMatchers);
-    const fallbackUrls = new Set(fallbackMatches.map(({ link }) => link.url));
+    for (const { link } of unmatchedLinks) {
+      const fallbackMatch = fallbackByUrl.get(link.url);
 
-    for (const { link, date } of fallbackMatches) {
-      candidatesByDate.get(date)?.push({
+      if (!fallbackMatch) {
+        continue;
+      }
+
+      candidatesByDate.get(fallbackMatch.date)?.push({
         label: getPdfLabel(link),
         url: normalizePdfUrl(link.url)
       });
     }
 
     for (const { link, matchingDates } of unmatchedLinks) {
-      if (fallbackUrls.has(link.url)) {
+      if (fallbackByUrl.has(link.url)) {
         continue;
       }
 
