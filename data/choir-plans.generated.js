@@ -426,7 +426,7 @@ window.CHOIR_PLANS_GENERATED = [
     "pdfLinks": [
       {
         "label": "All PDFs",
-        "url": "https://drive.google.com/file/d/1W4kGltRFsW3AyEReumYG8uN3qxwRMdjV/view?usp=sharing"
+        "url": "https://drive.google.com/file/d/1oTW0ZrBc0VOVWct-j8KUrQl9xBlblLgQ/view?usp=sharing"
       }
     ],
     "songs": [
@@ -521,7 +521,12 @@ window.CHOIR_PLANS_GENERATED = [
   {
     "date": "2026-06-21",
     "title": "Twelfth Sunday in Ordinary Time (A)",
-    "pdfLinks": [],
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1W4kGltRFsW3AyEReumYG8uN3qxwRMdjV/view?usp=sharing"
+      }
+    ],
     "songs": [
       {
         "role": "Entrance",
