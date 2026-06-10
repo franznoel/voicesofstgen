@@ -94,7 +94,9 @@ const galleryImages = [
   { src: "assets/gallery/converted/IMG_6799.jpg", alt: "St. Genevieve choir photo 11" },
   { src: "assets/gallery/converted/IMG_6800.jpg", alt: "St. Genevieve choir photo 12" },
   { src: "assets/gallery/converted/IMG_6803.jpg", alt: "St. Genevieve choir photo 13" },
-  { src: "assets/gallery/converted/IMG_6804.jpg", alt: "St. Genevieve choir photo 14" }
+  { src: "assets/gallery/converted/IMG_6804.jpg", alt: "St. Genevieve choir photo 14" },
+  { src: "assets/gallery/image000000.jpg", alt: "St. Genevieve choir photo 15", width: 1600, height: 1200 },
+  { src: "assets/gallery/image000001.jpg", alt: "St. Genevieve choir photo 16", width: 1600, height: 1200 }
 ];
 
 const currentPlanEl = document.querySelector("#current-plan");
@@ -353,6 +355,9 @@ function renderVideos(plan) {
 function renderGallery() {
   galleryGridEl.innerHTML = galleryImages.map((image, index) => {
     const caption = `Choir photo ${index + 1}`;
+    const sizeAttributes = image.width && image.height
+      ? ` width="${image.width}" height="${image.height}"`
+      : "";
 
     return `
       <button
@@ -361,7 +366,7 @@ function renderGallery() {
         data-gallery-index="${index}"
         aria-label="Open ${caption}"
       >
-        <img src="${image.src}" alt="${escapeAttribute(image.alt)}" loading="lazy">
+        <img src="${image.src}" alt="${escapeAttribute(image.alt)}" loading="lazy"${sizeAttributes}>
         <span>${caption}</span>
       </button>
     `;
@@ -439,6 +444,13 @@ function renderGalleryDialogImage() {
 
   galleryDialogImageEl.src = image.src;
   galleryDialogImageEl.alt = image.alt;
+  if (image.width && image.height) {
+    galleryDialogImageEl.width = image.width;
+    galleryDialogImageEl.height = image.height;
+  } else {
+    galleryDialogImageEl.removeAttribute("width");
+    galleryDialogImageEl.removeAttribute("height");
+  }
   galleryDialogCaptionEl.textContent = caption;
 }
 
