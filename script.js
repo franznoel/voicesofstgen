@@ -8,6 +8,16 @@ const fallbackChoirPlans = getPlanDataFromWindow("CHOIR_PLANS_FALLBACK");
 const generatedChoirPlans = getPlanDataFromWindow("CHOIR_PLANS_GENERATED");
 const choirPlans = generatedChoirPlans || fallbackChoirPlans || failMissingPlanData();
 
+const choirEvents = [
+  {
+    date: "2026-06-27",
+    title: "Choir Appreciation Dinner",
+    details: "More information to follow.",
+    time: "Time to be announced",
+    type: "event"
+  }
+];
+
 const scrapedVideoReferences = [
   ["Wh61poqcnpA", "Alleluia! Sing to Jesus"],
   ["9pDy_9Hb8Wc", "Only in God"],
@@ -260,14 +270,24 @@ function setupPlanSelection() {
 
 function renderCalendar() {
   const activePlanCutoffDate = getActivePlanCutoffDateString(TODAY);
-  const activePlans = choirPlans.filter(
-    (plan) => plan.date >= activePlanCutoffDate,
-  );
+  const activePlans = choirPlans
+    .filter((plan) => plan.date >= activePlanCutoffDate)
+    .map((plan) => ({ kind: "plan", ...plan }));
+  const activeEvents = choirEvents
+    .filter((event) => event.date >= activePlanCutoffDate)
+    .map((event) => ({ kind: "event", ...event }));
+  const calendarItems = [...activePlans, ...activeEvents]
+    .sort((left, right) => left.date.localeCompare(right.date) || getCalendarKindOrder(left.kind) - getCalendarKindOrder(right.kind));
 
-  calendarListEl.innerHTML = activePlans.map(renderCalendarEvent).join("");
+  calendarListEl.innerHTML = calendarItems.map(renderCalendarEvent).join("");
 }
 
-function renderCalendarEvent(plan) {
+function renderCalendarEvent(item) {
+  if (item.kind === "event") {
+    return renderChoirEvent(item);
+  }
+
+  const plan = item;
   const isCurrent = plan.date === selectedPlan.date;
   const videos = getUniqueVideosForPlan(plan);
   const pdfCount = plan.pdfLinks.length;
@@ -288,6 +308,26 @@ function renderCalendarEvent(plan) {
       </button>
     </article>
   `;
+}
+
+function renderChoirEvent(event) {
+  return `
+    <article class="calendar-event choir-event">
+      <div class="calendar-date event-date" aria-hidden="true">
+        <span>${formatMonth(event.date)}</span>
+        <strong>${formatDay(event.date)}</strong>
+      </div>
+      <div class="calendar-event-body">
+        <time datetime="${event.date}">${formatDate(event.date)}</time>
+        <h3>${escapeHtml(event.title)}</h3>
+        <p>${escapeHtml(event.time)} &middot; ${escapeHtml(event.details)}</p>
+      </div>
+    </article>
+  `;
+}
+
+function getCalendarKindOrder(kind) {
+  return kind === "event" ? 1 : 0;
 }
 
 function renderPlanCard(plan) {
