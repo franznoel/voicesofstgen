@@ -199,5 +199,18 @@ window.CHOIR_PLANS_FALLBACK = [
       { title: "Somos El Cuerpo De Cristo", videoId: "9Vj_VYbbn_c" },
       "Go to July"
     ]
+  },
+  {
+    date: "2026-07-05",
+    title: "Fourteenth Sunday in Ordinary Time (A)",
+    pdfLinks: [],
+    songs: [
+      { role: "Entrance", title: "Take Up Your Cross", composer: "", videoId: "HZboEnq9I4k" },
+      { role: "Preparation of Gifts", title: "Precious Lord, Take My Hand", composer: "", videoId: "AWFd5ohIW30" },
+      { role: "Communion", title: "Taste and See", composer: "Moore", videoId: "gcn1-9Fg0WA" },
+      { role: "Communion", title: "Prayer of St. Francis", composer: "", videoId: "AEoyqMG1bDA" },
+      { role: "Recessional", title: "Lead Me Lord", composer: "", videoId: "Oivf0HdHlV8" }
+    ],
+    optionalSongs: []
   }
 ];

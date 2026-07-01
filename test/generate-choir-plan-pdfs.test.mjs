@@ -178,6 +178,47 @@ test("keeps fallback link order aligned when some links already match by context
   ]);
 });
 
+test("does not carry a known section across an intervening unknown date", () => {
+  const scrape = {
+    pages: [
+      {
+        title: "St. Peter and Paul",
+        text: "14th Sunday in Ordinary Time July 5, 2026 All PDFs Entrance Take Up Your Cross 15th Sunday in Ordinary Time July 13, 2025 All PDFs Entrance In This Place",
+        driveLinks: [
+          {
+            url: "https://drive.google.com/file/d/july-5/view",
+            text: "All PDFs",
+            context: "July 5, 2026 All PDFs Entrance"
+          },
+          {
+            url: "https://drive.google.com/file/d/july-13/view",
+            text: "All PDFs",
+            context: "All PDFs Entrance"
+          }
+        ],
+        pdfLinks: []
+      }
+    ]
+  };
+  const plans = [
+    {
+      date: "2026-07-05",
+      title: "Fourteenth Sunday in Ordinary Time (A)",
+      pdfLinks: [],
+      songs: [],
+      optionalSongs: []
+    }
+  ];
+
+  const { plans: generatedPlans, report } = generatePlansWithPdfLinks(plans, scrape);
+
+  assert.deepEqual(generatedPlans[0].pdfLinks, [
+    { label: "All PDFs", url: "https://drive.google.com/file/d/july-5/view?usp=sharing" }
+  ]);
+  assert.equal(report.warnings.length, 1);
+  assert.equal(report.warnings[0].url, "https://drive.google.com/file/d/july-13/view");
+});
+
 test("formatted generated output is stable for idempotent comparisons", () => {
   const output = formatPlanData("CHOIR_PLANS_GENERATED", fallbackPlans);
 

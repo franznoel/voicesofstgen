@@ -24,8 +24,15 @@ Optional environment variables:
 
 ```bash
 SCRAPE_START_URL=https://sites.google.com/view/stgenchoir/
+SCRAPE_EXTRA_URLS=https://sites.google.com/view/stgenchoir/another-page
 SCRAPE_OUTPUT=data/stgenchoir-scrape.json
 SCRAPE_MAX_PAGES=10
+```
+
+The scraper also seeds known source pages that are not reliably discoverable from the start page, including:
+
+```text
+https://sites.google.com/view/stgenchoir/st-peter-and-paul
 ```
 
 ## GitHub Actions

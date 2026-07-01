@@ -2,6 +2,11 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 
 const START_URL = process.env.SCRAPE_START_URL || "https://sites.google.com/view/stgenchoir/";
+const DEFAULT_EXTRA_URLS = ["https://sites.google.com/view/stgenchoir/st-peter-and-paul"];
+const EXTRA_URLS = [
+  ...DEFAULT_EXTRA_URLS,
+  ...parseExtraUrls(process.env.SCRAPE_EXTRA_URLS || "")
+];
 const OUTPUT_PATH = resolve(process.cwd(), process.env.SCRAPE_OUTPUT || "data/stgenchoir-scrape.json");
 const MAX_PAGES = Number.parseInt(process.env.SCRAPE_MAX_PAGES || "10", 10);
 const REQUEST_HEADERS = {
@@ -11,7 +16,7 @@ const REQUEST_HEADERS = {
 const siteOrigin = new URL(START_URL).origin;
 const sitePathPrefix = normalizePath(new URL(START_URL).pathname);
 const seen = new Set();
-const queue = [START_URL];
+const queue = unique([START_URL, ...EXTRA_URLS]);
 const pages = [];
 
 while (queue.length > 0 && pages.length < MAX_PAGES) {
@@ -265,6 +270,13 @@ function normalizeUrl(url) {
 
 function normalizePath(pathname) {
   return pathname.replace(/\/+$/, "");
+}
+
+function parseExtraUrls(value) {
+  return value
+    .split(",")
+    .map((url) => url.trim())
+    .filter(Boolean);
 }
 
 function stripTags(value) {

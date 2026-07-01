@@ -238,7 +238,9 @@ function findPlanSections(text, planMatchers) {
 
     sections.push({
       date: plan.date,
-      index: Math.min(...positions)
+      index: Math.min(...positions),
+      patterns,
+      text
     });
   }
 
@@ -256,7 +258,26 @@ function findSectionForIndex(sections, index) {
     section = candidate;
   }
 
+  if (section && hasInterveningDateMismatch(section, index)) {
+    return null;
+  }
+
   return section;
+}
+
+function hasInterveningDateMismatch(section, markerIndex) {
+  const interveningDates = [...section.text.slice(section.index, markerIndex).matchAll(getDateMarkerPattern())];
+  const latestDate = interveningDates.at(-1);
+
+  if (!latestDate) {
+    return false;
+  }
+
+  const latestDateText = latestDate[0];
+  return !section.patterns.some((pattern) => {
+    pattern.lastIndex = 0;
+    return pattern.test(latestDateText);
+  });
 }
 
 function normalizePdfUrl(url) {
@@ -287,6 +308,10 @@ function getPlanDatePatterns(date) {
     new RegExp(`\\b${escapeRegExp(monthName)}\\s+${dayText}\\b`, "i"),
     new RegExp(`\\b${escapeRegExp(monthName)}\\s+${paddedDay}\\b`, "i")
   ];
+}
+
+function getDateMarkerPattern() {
+  return /\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}(?:,\s*\d{4})?\b/gi;
 }
 
 function getPlanTitlePattern(title) {

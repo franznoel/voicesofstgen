@@ -85,7 +85,11 @@ const scrapedVideoReferences = [
   ["z_WrU9oWqh0", "The Supper of the Lord"],
   ["q77uRQxKDCY", "We Are Many Parts"],
   ["Y845n-lXO4o", "I Am the Bread of Life"],
-  ["9Vj_VYbbn_c", "We Are the Body of Christ"]
+  ["9Vj_VYbbn_c", "We Are the Body of Christ"],
+  ["AWFd5ohIW30", "Precious Lord, Take My Hand"],
+  ["gcn1-9Fg0WA", "Taste and See"],
+  ["AEoyqMG1bDA", "Prayer of St. Francis"],
+  ["Oivf0HdHlV8", "Lead Me Lord"]
 ];
 
 const videoTitleById = new Map(scrapedVideoReferences);

@@ -620,5 +620,48 @@ window.CHOIR_PLANS_GENERATED = [
       },
       "Go to July"
     ]
+  },
+  {
+    "date": "2026-07-05",
+    "title": "Fourteenth Sunday in Ordinary Time (A)",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1u-tDYXDryTigEfh56QRPs9qvou44Lm8u/view?usp=sharing"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Take Up Your Cross",
+        "composer": "",
+        "videoId": "HZboEnq9I4k"
+      },
+      {
+        "role": "Preparation of Gifts",
+        "title": "Precious Lord, Take My Hand",
+        "composer": "",
+        "videoId": "AWFd5ohIW30"
+      },
+      {
+        "role": "Communion",
+        "title": "Taste and See",
+        "composer": "Moore",
+        "videoId": "gcn1-9Fg0WA"
+      },
+      {
+        "role": "Communion",
+        "title": "Prayer of St. Francis",
+        "composer": "",
+        "videoId": "AEoyqMG1bDA"
+      },
+      {
+        "role": "Recessional",
+        "title": "Lead Me Lord",
+        "composer": "",
+        "videoId": "Oivf0HdHlV8"
+      }
+    ],
+    "optionalSongs": []
   }
 ];
