@@ -663,5 +663,128 @@ window.CHOIR_PLANS_GENERATED = [
       }
     ],
     "optionalSongs": []
+  },
+  {
+    "date": "2026-07-12",
+    "title": "Fifteenth Sunday in Ordinary Time (A)",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/13M0FAkBnVZ2mGqDF6c7faCPNARx11x3J/view?usp=sharing"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "For the Beauty of the Earth",
+        "composer": "",
+        "videoId": "agX7UAY5SxM"
+      },
+      {
+        "role": "Preparation of Gifts",
+        "title": "Your Words Are Spirit and Life",
+        "composer": "",
+        "videoId": "3auYdpFr5N4"
+      },
+      {
+        "role": "Communion",
+        "title": "Jesus, My Lord, My God, My All",
+        "composer": "",
+        "videoId": "vL6zvsRxpMo"
+      },
+      {
+        "role": "Communion",
+        "title": "Eat This Bread",
+        "composer": "",
+        "videoId": "ntJwBHlbwGw"
+      },
+      {
+        "role": "Recessional",
+        "title": "Kapayapaan, Peace Be With You",
+        "composer": "",
+        "videoId": "__6ukoLRgds"
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-07-19",
+    "title": "Sixteenth Sunday in Ordinary Time (A)",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1OrlFVjk8v9jo9mIPD5oKzbVW4cXv7qrl/view?usp=sharing"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Seed Scattered and Sown",
+        "composer": "",
+        "videoId": "b3wm1ZEXaiM"
+      },
+      {
+        "role": "Preparation of Gifts",
+        "title": "Shelter Me, O God",
+        "composer": "",
+        "videoId": "azE2m86qvb4"
+      },
+      {
+        "role": "Communion",
+        "title": "Miracle of Grace",
+        "composer": "",
+        "videoId": "-tg7539_wOE"
+      },
+      {
+        "role": "Communion",
+        "title": "Bread of Angels",
+        "composer": "",
+        "videoId": "0XMGRUUFr0M"
+      },
+      {
+        "role": "Recessional",
+        "title": "Go Out, Go Out",
+        "composer": "",
+        "videoId": "bdiEEVIhvPI"
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-07-26",
+    "title": "Seventeenth Sunday in Ordinary Time (A)",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1tNUyh9lg6BYeVN7XVw2pV6dAy_7acha8/view?usp=sharing"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "The God of All Grace",
+        "composer": "",
+        "videoId": "-c0vzIF87EU"
+      },
+      {
+        "role": "Preparation of Gifts",
+        "title": "Be Not Afraid",
+        "composer": "",
+        "videoId": "2oSiX1WKg4w"
+      },
+      {
+        "role": "Communion",
+        "title": "I Received the Living God",
+        "composer": "",
+        "videoId": "7aDMY9xU_6U"
+      },
+      {
+        "role": "Recessional",
+        "title": "To Jesus Christ, Our Sovereign King",
+        "composer": "",
+        "videoId": "wol02WZ4AeI"
+      }
+    ],
+    "optionalSongs": []
   }
 ];
