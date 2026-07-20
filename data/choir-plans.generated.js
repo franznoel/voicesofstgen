@@ -756,7 +756,7 @@ window.CHOIR_PLANS_GENERATED = [
     "pdfLinks": [
       {
         "label": "All PDFs",
-        "url": "https://drive.google.com/file/d/1tNUyh9lg6BYeVN7XVw2pV6dAy_7acha8/view?usp=sharing"
+        "url": "https://drive.google.com/file/d/1SH0k6V4c8N4Jcf4xMN7Cew5f7FXOl4uG/view?usp=sharing"
       }
     ],
     "songs": [
