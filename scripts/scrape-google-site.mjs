@@ -2,7 +2,10 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 
 const START_URL = process.env.SCRAPE_START_URL || "https://sites.google.com/view/stgenchoir/";
-const DEFAULT_EXTRA_URLS = ["https://sites.google.com/view/stgenchoir/st-peter-and-paul"];
+const DEFAULT_EXTRA_URLS = [
+  "https://sites.google.com/view/stgenchoir/st-peter-and-paul",
+  "https://sites.google.com/view/stgenchoir/august-ot"
+];
 const EXTRA_URLS = [
   ...DEFAULT_EXTRA_URLS,
   ...parseExtraUrls(process.env.SCRAPE_EXTRA_URLS || "")

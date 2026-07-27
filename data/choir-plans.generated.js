@@ -713,7 +713,7 @@ window.CHOIR_PLANS_GENERATED = [
     "pdfLinks": [
       {
         "label": "All PDFs",
-        "url": "https://drive.google.com/file/d/1OrlFVjk8v9jo9mIPD5oKzbVW4cXv7qrl/view?usp=sharing"
+        "url": "https://drive.google.com/file/d/18WL9ww7jb0yzGeGn8BFKKs2UgV5Xu9Or/view?usp=sharing"
       }
     ],
     "songs": [
@@ -783,6 +783,252 @@ window.CHOIR_PLANS_GENERATED = [
         "title": "To Jesus Christ, Our Sovereign King",
         "composer": "",
         "videoId": "wol02WZ4AeI"
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-08-02",
+    "title": "Eighteenth Sunday in Ordinary Time (A)",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/14Ff3Fyl8ATevca1SYjp5AItPYTcpBZf7/view?usp=sharing"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Ven al Banquete / Come to the Feast",
+        "composer": "Hurd",
+        "videoId": "D_6O-RqkMtI"
+      },
+      {
+        "role": "Offertory",
+        "title": "Many and Great",
+        "composer": "Manalo",
+        "videoId": "fkNuVknp26s"
+      },
+      {
+        "role": "Communion",
+        "title": "Draw Near",
+        "composer": "Janco",
+        "videoId": "YPWQPq4noYE"
+      },
+      {
+        "role": "Communion",
+        "title": "Here I Am, Lord",
+        "composer": "",
+        "videoId": "zBg-yDhM2KY"
+      },
+      {
+        "role": "Recessional",
+        "title": "Rain Down",
+        "composer": "Jaime Cortez",
+        "videoId": "pmOswvlS6CQ"
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-08-09",
+    "title": "Nineteenth Sunday in Ordinary Time (A)",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1kBuMhkLxOZ6e7cc9qQXSUYbSA0YKK0J_/view?usp=sharing"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Holy, Holy, Holy",
+        "composer": "Nicaea",
+        "videoId": "ntdcY8q7a9E"
+      },
+      {
+        "role": "Offertory",
+        "title": "Be Not Afraid",
+        "composer": "Dufford",
+        "videoId": "2oSiX1WKg4w"
+      },
+      {
+        "role": "Communion",
+        "title": "Only in God",
+        "composer": "Talbot",
+        "videoId": "9pDy_9Hb8Wc"
+      },
+      {
+        "role": "Recessional",
+        "title": "How Can I Keep from Singing",
+        "composer": "",
+        "videoId": "uhkI41GdCGI"
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-08-14",
+    "title": "Solemnity of the Assumption of the Blessed Virgin Mary",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1TWi9wH224rRWyAYtPudDMdkG-gM1Cuf6/view?usp=sharing"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Song of Mary",
+        "composer": "Dan Schutte · BB 696",
+        "videoId": ""
+      },
+      {
+        "role": "Preparation of Gifts",
+        "title": "Holy Mary, Revealing Your Son",
+        "composer": "Manalo · BB 694",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Hail Mary, Gentle Woman",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Hail, Holy Queen",
+        "composer": "Traditional · BB 200",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-08-16",
+    "title": "Twentieth Sunday in Ordinary Time (A)",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1bo2qg1qEDjx-CmTp92sRNN8RFeKj2k4w/view?usp=sharing"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Praise, My Soul, the King of Heaven",
+        "composer": "Lauda Anima",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "You Alone",
+        "composer": "Sarah Hart",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Psalm 42: As the Deer Longs",
+        "composer": "Waly Waly (not Hurd / Farrell)",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "With the Lord There Is Mercy",
+        "composer": "Rick Modlin",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Somos El Cuerpo de Cristo / We Are the Body of Christ",
+        "composer": "Jaime Cortez",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-08-23",
+    "title": "Twenty-first Sunday in Ordinary Time (A)",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1hYOyapzPFoz2AIf66YJZDjixiAmBhd18/view?usp=sharing"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Here at This Table",
+        "composer": "Janet Whitaker",
+        "videoId": ""
+      },
+      {
+        "role": "Preparation of Gifts",
+        "title": "O God, You Search Me",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "On Eagle's Wings",
+        "composer": "Joncas",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "This Alone",
+        "composer": "Tim Manion",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "One Spirit, One Church",
+        "composer": "Kevin Keil / Maryanne Quinlivan",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-08-30",
+    "title": "Twenty-second Sunday in Ordinary Time (A)",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1gu84Qib1N9_IfUslvfQ2oPFqllKF_iZ8/view?usp=sharing"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Take Up Your Cross",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Preparation of Gifts",
+        "title": "I Will Choose Christ",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Loving and Forgiving",
+        "composer": "Soper",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Taste and See",
+        "composer": "Moore",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Take the Word of God with You",
+        "composer": "Walker",
+        "videoId": ""
       }
     ],
     "optionalSongs": []
