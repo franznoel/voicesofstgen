@@ -34,6 +34,11 @@ const choirEvents = [
 ];
 
 const scrapedVideoReferences = [
+  ["IhbdfAYPAQ4", "Praise, My Soul, the King of Heaven"],
+  ["4LF1Rel8j7U", "You Alone"],
+  ["HZ03t3pqesA", "Psalm 42: As the Deer Longs"],
+  ["H1FY1Co8kyQ", "Psalm 130: With the Lord There Is Mercy"],
+  ["9HDC1NYwlag", "Somos el Cuerpo de Cristo"],
   ["Wh61poqcnpA", "Alleluia! Sing to Jesus"],
   ["9pDy_9Hb8Wc", "Only in God"],
   ["ntJwBHlbwGw", "Eat This Bread"],

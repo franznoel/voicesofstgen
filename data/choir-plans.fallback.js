@@ -301,11 +301,11 @@ window.CHOIR_PLANS_FALLBACK = [
       { label: "All PDFs", url: "https://drive.google.com/file/d/1bo2qg1qEDjx-CmTp92sRNN8RFeKj2k4w/view?usp=sharing" }
     ],
     songs: [
-      { role: "Entrance", title: "Praise, My Soul, the King of Heaven", composer: "Lauda Anima", videoId: "" },
-      { role: "Offertory", title: "You Alone", composer: "Sarah Hart", videoId: "" },
-      { role: "Communion", title: "Psalm 42: As the Deer Longs", composer: "Waly Waly (not Hurd / Farrell)", videoId: "" },
-      { role: "Communion", title: "With the Lord There Is Mercy", composer: "Rick Modlin", videoId: "" },
-      { role: "Recessional", title: "Somos El Cuerpo de Cristo / We Are the Body of Christ", composer: "Jaime Cortez", videoId: "" }
+      { role: "Entrance", title: "Praise, My Soul, the King of Heaven", composer: "Lauda Anima", videoId: "IhbdfAYPAQ4" },
+      { role: "Offertory", title: "You Alone", composer: "Sarah Hart", videoId: "4LF1Rel8j7U" },
+      { role: "Communion", title: "Psalm 42: As the Deer Longs", composer: "Waly Waly (not Hurd / Farrell)", videoId: "HZ03t3pqesA" },
+      { role: "Communion", title: "With the Lord There Is Mercy", composer: "Rick Modlin", videoId: "H1FY1Co8kyQ" },
+      { role: "Recessional", title: "Somos El Cuerpo de Cristo / We Are the Body of Christ", composer: "Jaime Cortez", videoId: "9HDC1NYwlag" }
     ],
     optionalSongs: []
   },

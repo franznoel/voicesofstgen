@@ -918,31 +918,31 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Entrance",
         "title": "Praise, My Soul, the King of Heaven",
         "composer": "Lauda Anima",
-        "videoId": ""
+        "videoId": "IhbdfAYPAQ4"
       },
       {
         "role": "Offertory",
         "title": "You Alone",
         "composer": "Sarah Hart",
-        "videoId": ""
+        "videoId": "4LF1Rel8j7U"
       },
       {
         "role": "Communion",
         "title": "Psalm 42: As the Deer Longs",
         "composer": "Waly Waly (not Hurd / Farrell)",
-        "videoId": ""
+        "videoId": "HZ03t3pqesA"
       },
       {
         "role": "Communion",
         "title": "With the Lord There Is Mercy",
         "composer": "Rick Modlin",
-        "videoId": ""
+        "videoId": "H1FY1Co8kyQ"
       },
       {
         "role": "Recessional",
         "title": "Somos El Cuerpo de Cristo / We Are the Body of Christ",
         "composer": "Jaime Cortez",
-        "videoId": ""
+        "videoId": "9HDC1NYwlag"
       }
     ],
     "optionalSongs": []
