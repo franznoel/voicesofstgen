@@ -10,10 +10,25 @@ const choirPlans = generatedChoirPlans || fallbackChoirPlans || failMissingPlanD
 
 const choirEvents = [
   {
-    date: "2026-06-27",
-    title: "Choir Appreciation Dinner",
-    details: "More information to follow.",
+    date: "2026-08-10",
+    endDate: "2026-08-18",
+    title: "Zoom Novena for the Dead",
+    details: "In loving memory of Maya Forbes. Meeting ID: 849 4455 5815; Passcode: RIPMAYA.",
+    time: "Time not specified",
+    type: "event"
+  },
+  {
+    date: "2026-08-30",
+    title: "Summer Bonanza at Caza Grace",
+    details: "Choir event at Caza Grace.",
     time: "Time to be announced",
+    type: "event"
+  },
+  {
+    date: "2026-09-05",
+    title: "Sing in St. Genevieve Church",
+    details: "Choir singing at St. Genevieve Church.",
+    time: "5:00 PM",
     type: "event"
   }
 ];
@@ -95,6 +110,12 @@ const scrapedVideoReferences = [
 const videoTitleById = new Map(scrapedVideoReferences);
 
 const galleryImages = [
+  { src: "assets/gallery/choir-july-2026-01.jpg", alt: "St. Genevieve choir group photo in the church", width: 1024, height: 576 },
+  { src: "assets/gallery/choir-july-2026-02.jpg", alt: "St. Genevieve choir group photo in the church", width: 1024, height: 576 },
+  { src: "assets/gallery/choir-july-2026-03.jpg", alt: "St. Genevieve choir group photo in the church", width: 1024, height: 576 },
+  { src: "assets/gallery/choir-july-2026-04.jpg", alt: "St. Genevieve choir group photo in the church", width: 1024, height: 576 },
+  { src: "assets/gallery/choir-july-2026-05.jpg", alt: "St. Genevieve choir group photo in the church", width: 1024, height: 576 },
+  { src: "assets/gallery/choir-july-2026-06.jpg", alt: "St. Genevieve choir group photo in the church", width: 1024, height: 576 },
   { src: "assets/gallery/1000046063.jpg", alt: "St. Genevieve choir photo 1" },
   { src: "assets/gallery/1000046064.jpg", alt: "St. Genevieve choir photo 2" },
   { src: "assets/gallery/Resized_20251228_094553.jpeg", alt: "St. Genevieve choir photo 3" },
@@ -278,7 +299,7 @@ function renderCalendar() {
     .filter((plan) => plan.date >= activePlanCutoffDate)
     .map((plan) => ({ kind: "plan", ...plan }));
   const activeEvents = choirEvents
-    .filter((event) => event.date >= activePlanCutoffDate)
+    .filter((event) => (event.endDate || event.date) >= activePlanCutoffDate)
     .map((event) => ({ kind: "event", ...event }));
   const calendarItems = [...activePlans, ...activeEvents]
     .sort((left, right) => left.date.localeCompare(right.date) || getCalendarKindOrder(left.kind) - getCalendarKindOrder(right.kind));
@@ -315,14 +336,21 @@ function renderCalendarEvent(item) {
 }
 
 function renderChoirEvent(event) {
+  const eventDate = event.endDate
+    ? `${formatDate(event.date)}–${formatDate(event.endDate)}`
+    : formatDate(event.date);
+  const dateTime = event.endDate
+    ? `<time datetime="${event.date}">${formatDate(event.date)}</time>–<time datetime="${event.endDate}">${formatDate(event.endDate)}</time>`
+    : `<time datetime="${event.date}">${formatDate(event.date)}</time>`;
+
   return `
-    <article class="calendar-event choir-event">
+    <article class="calendar-event choir-event" aria-label="${escapeAttribute(event.title)} on ${escapeAttribute(eventDate)}">
       <div class="calendar-date event-date" aria-hidden="true">
         <span>${formatMonth(event.date)}</span>
         <strong>${formatDay(event.date)}</strong>
       </div>
       <div class="calendar-event-body">
-        <time datetime="${event.date}">${formatDate(event.date)}</time>
+        ${dateTime}
         <h3>${escapeHtml(event.title)}</h3>
         <p>${escapeHtml(event.time)} &middot; ${escapeHtml(event.details)}</p>
       </div>
