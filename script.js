@@ -115,6 +115,16 @@ const scrapedVideoReferences = [
 const videoTitleById = new Map(scrapedVideoReferences);
 
 const galleryImages = [
+  { src: "assets/gallery/choir-august-2026-01.jpg", alt: "St. Genevieve choir gathering in the church", width: 1024, height: 768 },
+  { src: "assets/gallery/choir-august-2026-02.jpg", alt: "St. Genevieve choir gathering in the church", width: 1024, height: 768 },
+  { src: "assets/gallery/choir-august-2026-03.jpg", alt: "St. Genevieve choir gathering in the church", width: 1024, height: 768 },
+  { src: "assets/gallery/choir-august-2026-04.jpg", alt: "St. Genevieve choir group photo by the piano", width: 1024, height: 768 },
+  { src: "assets/gallery/choir-august-2026-05.jpg", alt: "St. Genevieve choir group photo by the piano", width: 1024, height: 768 },
+  { src: "assets/gallery/choir-august-2026-06.jpg", alt: "St. Genevieve choir group photo by the piano", width: 1024, height: 768 },
+  { src: "assets/gallery/choir-august-2026-07.jpg", alt: "St. Genevieve choir group photo by the piano", width: 1024, height: 768 },
+  { src: "assets/gallery/choir-birthday-2026-01.jpg", alt: "St. Genevieve choir birthday celebration", width: 1600, height: 1200 },
+  { src: "assets/gallery/choir-birthday-2026-02.jpg", alt: "St. Genevieve choir birthday celebration", width: 1600, height: 1200 },
+  { type: "video", src: "assets/gallery/choir-august-2026-video.mp4", poster: "assets/gallery/choir-august-2026-video-poster.jpg", alt: "St. Genevieve choir video", width: 176, height: 144 },
   { src: "assets/gallery/choir-july-2026-01.jpg", alt: "St. Genevieve choir group photo in the church", width: 1024, height: 576 },
   { src: "assets/gallery/choir-july-2026-02.jpg", alt: "St. Genevieve choir group photo in the church", width: 1024, height: 576 },
   { src: "assets/gallery/choir-july-2026-03.jpg", alt: "St. Genevieve choir group photo in the church", width: 1024, height: 576 },
@@ -149,6 +159,7 @@ const calendarListEl = document.querySelector("#calendar-list");
 const galleryGridEl = document.querySelector("#gallery-grid");
 const galleryDialogEl = document.querySelector("#gallery-dialog");
 const galleryDialogImageEl = document.querySelector("#gallery-dialog-image");
+const galleryDialogVideoEl = document.querySelector("#gallery-dialog-video");
 const galleryDialogCaptionEl = document.querySelector("#gallery-dialog-caption");
 
 let selectedPlan = getCurrentPlan(choirPlans, TODAY);
@@ -431,7 +442,8 @@ function renderVideos(plan) {
 
 function renderGallery() {
   galleryGridEl.innerHTML = galleryImages.map((image, index) => {
-    const caption = `Choir photo ${index + 1}`;
+    const isVideo = image.type === "video";
+    const caption = isVideo ? "Choir video" : `Choir photo ${index + 1}`;
     const sizeAttributes = image.width && image.height
       ? ` width="${image.width}" height="${image.height}"`
       : "";
@@ -443,7 +455,9 @@ function renderGallery() {
         data-gallery-index="${index}"
         aria-label="Open ${caption}"
       >
-        <img src="${image.src}" alt="${escapeAttribute(image.alt)}" loading="lazy"${sizeAttributes}>
+        <span class="gallery-thumbnail${isVideo ? " video-thumbnail" : ""}">
+          <img src="${isVideo ? image.poster : image.src}" alt="${escapeAttribute(image.alt)}" loading="lazy"${sizeAttributes}>
+        </span>
         <span>${caption}</span>
       </button>
     `;
@@ -458,6 +472,8 @@ function setupGalleryDialog() {
   galleryDialogEl.querySelector(".dialog-close").addEventListener("click", () => {
     galleryDialogEl.close();
   });
+
+  galleryDialogEl.addEventListener("close", () => galleryDialogVideoEl.pause());
 
   galleryDialogEl.querySelectorAll("[data-gallery-direction]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -517,7 +533,21 @@ function moveGallery(direction, method = "button") {
 
 function renderGalleryDialogImage() {
   const image = galleryImages[selectedGalleryIndex];
-  const caption = `Choir photo ${selectedGalleryIndex + 1} of ${galleryImages.length}`;
+  const isVideo = image.type === "video";
+  const caption = isVideo ? "Choir video" : `Choir photo ${selectedGalleryIndex + 1} of ${galleryImages.length}`;
+
+  galleryDialogVideoEl.pause();
+  galleryDialogVideoEl.hidden = !isVideo;
+  galleryDialogImageEl.hidden = isVideo;
+
+  if (isVideo) {
+    galleryDialogVideoEl.src = image.src;
+    galleryDialogVideoEl.poster = image.poster;
+    galleryDialogVideoEl.width = image.width;
+    galleryDialogVideoEl.height = image.height;
+    galleryDialogCaptionEl.textContent = caption;
+    return;
+  }
 
   galleryDialogImageEl.src = image.src;
   galleryDialogImageEl.alt = image.alt;
@@ -539,7 +569,8 @@ function getGalleryEventProperties(method) {
     image_index: selectedGalleryIndex,
     image_number: selectedGalleryIndex + 1,
     image_src: image.src,
-    image_alt: image.alt
+    image_alt: image.alt,
+    media_type: image.type || "image"
   };
 }
 
