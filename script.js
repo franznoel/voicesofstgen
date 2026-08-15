@@ -18,6 +18,13 @@ const choirEvents = [
     type: "event"
   },
   {
+    date: "2026-08-15",
+    title: "Virtus Training",
+    details: "Madonna Hall. Facilitators: Marina Marnan and Rebecca Chan-Russel. For volunteers who have not attended Virtus Training; certification is mandatory for Catholic Church volunteers in the archdiocese.",
+    time: "8:45 AM–12:00 PM",
+    type: "event"
+  },
+  {
     date: "2026-08-30",
     title: "Summer Bonanza at Caza Grace",
     details: "Choir event at Caza Grace.",
