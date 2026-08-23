@@ -339,5 +339,65 @@ window.CHOIR_PLANS_FALLBACK = [
       { role: "Recessional", title: "Take the Word of God with You", composer: "Walker", videoId: "ztA_P2Dq2tk" }
     ],
     optionalSongs: []
+  },
+  {
+    date: "2026-09-06",
+    title: "Twenty-third Sunday in Ordinary Time (A)",
+    pdfLinks: [
+      { label: "All PDFs", url: "https://drive.google.com/file/d/1ZBHtl-nGbR3YKA-Phl8TMxMx9plcl625/view?usp=sharing" }
+    ],
+    songs: [
+      { role: "Entrance", title: "O Bless the Lord, My Soul", composer: "St. Thomas (Williams)", videoId: "RekbFUc2O-E" },
+      { role: "Preparation of Gifts", title: "Your Words Are Spirit and Life", composer: "Farrell", videoId: "pz382d_XLwA" },
+      { role: "Communion", title: "As the Deer Longs", composer: "Hurd", videoId: "oENImc-U1dc" },
+      { role: "Communion", title: "Come to Me and Drink", composer: "", videoId: "qAfTt2pN8Aw" },
+      { role: "Recessional", title: "Rain Down", composer: "", videoId: "pmOswvlS6CQ" }
+    ],
+    optionalSongs: []
+  },
+  {
+    date: "2026-09-13",
+    title: "Twenty-fourth Sunday in Ordinary Time (A)",
+    pdfLinks: [
+      { label: "All PDFs", url: "https://drive.google.com/file/d/1o1FCjqSL9FVw4kRENR5SDWp4dlQUz0en/view?usp=sharing" }
+    ],
+    songs: [
+      { role: "Entrance", title: "For the Beauty of the Earth", composer: "Dix", videoId: "xmpJNeQLJ1s" },
+      { role: "Preparation of Gifts", title: "Prayer of St. Francis", composer: "Temple", videoId: "AEoyqMG1bDA" },
+      { role: "Communion", title: "Ang Katawan ni Kristo", composer: "Manalo", videoId: "7HzHdDzSqVg" },
+      { role: "Communion", title: "Bread of Life", composer: "Bernadette Farrell", videoId: "O2Fq0WlFl_0" },
+      { role: "Recessional", title: "City of God", composer: "", videoId: "kXZTYV1Pq_M" }
+    ],
+    optionalSongs: []
+  },
+  {
+    date: "2026-09-20",
+    title: "Twenty-fifth Sunday in Ordinary Time (A)",
+    pdfLinks: [
+      { label: "All PDFs", url: "https://drive.google.com/file/d/1rB_bNK0SBkNxWl4nkcV34cmqNwjoDOd2/view?usp=sharing" }
+    ],
+    songs: [
+      { role: "Entrance", title: "Canticle of the Sun", composer: "Haugen", videoId: "" },
+      { role: "Offertory", title: "Shepherd Me, O God", composer: "Marty Haugen", videoId: "" },
+      { role: "Communion", title: "I Received the Living God", composer: "", videoId: "" },
+      { role: "Communion", title: "Because the Lord Is My Shepherd", composer: "Walker", videoId: "" },
+      { role: "Recessional", title: "With One Voice", composer: "Manalo", videoId: "" }
+    ],
+    optionalSongs: []
+  },
+  {
+    date: "2026-09-27",
+    title: "Twenty-sixth Sunday in Ordinary Time (A)",
+    pdfLinks: [
+      { label: "All PDFs", url: "https://drive.google.com/file/d/1gixKiQxNpHlh3hCwCn1GQL5YACWpwVnw/view?usp=sharing" }
+    ],
+    songs: [
+      { role: "Entrance", title: "Holy, Holy, Holy", composer: "Nicaea", videoId: "" },
+      { role: "Offertory", title: "Jesus the Lord", composer: "Roc O'Connor", videoId: "" },
+      { role: "Communion", title: "The Cry of the Poor", composer: "John Foley", videoId: "" },
+      { role: "Communion", title: "Bread of Angels", composer: "", videoId: "" },
+      { role: "Recessional", title: "Lead Me, Lord", composer: "Becker", videoId: "" }
+    ],
+    optionalSongs: []
   }
 ];
