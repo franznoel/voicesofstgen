@@ -768,15 +768,21 @@ window.CHOIR_PLANS_GENERATED = [
       },
       {
         "role": "Preparation of Gifts",
-        "title": "Be Not Afraid",
-        "composer": "",
-        "videoId": "2oSiX1WKg4w"
+        "title": "Drawn to You",
+        "composer": "Sarah Hart",
+        "videoId": "Fio5gdJdhwo"
       },
       {
         "role": "Communion",
         "title": "I Received the Living God",
         "composer": "",
         "videoId": "7aDMY9xU_6U"
+      },
+      {
+        "role": "Communion",
+        "title": "I Am the Bread of Life",
+        "composer": "Toolan",
+        "videoId": "gADDeVUH4uc"
       },
       {
         "role": "Recessional",
@@ -961,31 +967,31 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Entrance",
         "title": "Here at This Table",
         "composer": "Janet Whitaker",
-        "videoId": ""
+        "videoId": "N195-vvy2CM"
       },
       {
         "role": "Preparation of Gifts",
         "title": "O God, You Search Me",
         "composer": "",
-        "videoId": ""
+        "videoId": "F-5wRqmFDqI"
       },
       {
         "role": "Communion",
         "title": "On Eagle's Wings",
         "composer": "Joncas",
-        "videoId": ""
+        "videoId": "65kMjfuMWyw"
       },
       {
         "role": "Communion",
         "title": "This Alone",
         "composer": "Tim Manion",
-        "videoId": ""
+        "videoId": "ccHVZMGiBEg"
       },
       {
         "role": "Recessional",
         "title": "One Spirit, One Church",
         "composer": "Kevin Keil / Maryanne Quinlivan",
-        "videoId": ""
+        "videoId": "nF0GoEUuMoE"
       }
     ],
     "optionalSongs": []
@@ -1004,31 +1010,31 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Entrance",
         "title": "Take Up Your Cross",
         "composer": "",
-        "videoId": ""
+        "videoId": "HZboEnq9I4k"
       },
       {
         "role": "Preparation of Gifts",
         "title": "I Will Choose Christ",
         "composer": "",
-        "videoId": ""
+        "videoId": "L793clHztwo"
       },
       {
         "role": "Communion",
         "title": "Loving and Forgiving",
         "composer": "Soper",
-        "videoId": ""
+        "videoId": "P3S32Rz6HBU"
       },
       {
         "role": "Communion",
         "title": "Taste and See",
         "composer": "Moore",
-        "videoId": ""
+        "videoId": "gcn1-9Fg0WA"
       },
       {
         "role": "Recessional",
         "title": "Take the Word of God with You",
         "composer": "Walker",
-        "videoId": ""
+        "videoId": "ztA_P2Dq2tk"
       }
     ],
     "optionalSongs": []

@@ -245,8 +245,9 @@ window.CHOIR_PLANS_FALLBACK = [
     pdfLinks: [],
     songs: [
       { role: "Entrance", title: "The God of All Grace", composer: "", videoId: "-c0vzIF87EU" },
-      { role: "Preparation of Gifts", title: "Be Not Afraid", composer: "", videoId: "2oSiX1WKg4w" },
+      { role: "Preparation of Gifts", title: "Drawn to You", composer: "Sarah Hart", videoId: "Fio5gdJdhwo" },
       { role: "Communion", title: "I Received the Living God", composer: "", videoId: "7aDMY9xU_6U" },
+      { role: "Communion", title: "I Am the Bread of Life", composer: "Toolan", videoId: "gADDeVUH4uc" },
       { role: "Recessional", title: "To Jesus Christ, Our Sovereign King", composer: "", videoId: "wol02WZ4AeI" }
     ],
     optionalSongs: []
@@ -316,11 +317,11 @@ window.CHOIR_PLANS_FALLBACK = [
       { label: "All PDFs", url: "https://drive.google.com/file/d/1hYOyapzPFoz2AIf66YJZDjixiAmBhd18/view?usp=sharing" }
     ],
     songs: [
-      { role: "Entrance", title: "Here at This Table", composer: "Janet Whitaker", videoId: "" },
-      { role: "Preparation of Gifts", title: "O God, You Search Me", composer: "", videoId: "" },
-      { role: "Communion", title: "On Eagle's Wings", composer: "Joncas", videoId: "" },
-      { role: "Communion", title: "This Alone", composer: "Tim Manion", videoId: "" },
-      { role: "Recessional", title: "One Spirit, One Church", composer: "Kevin Keil / Maryanne Quinlivan", videoId: "" }
+      { role: "Entrance", title: "Here at This Table", composer: "Janet Whitaker", videoId: "N195-vvy2CM" },
+      { role: "Preparation of Gifts", title: "O God, You Search Me", composer: "", videoId: "F-5wRqmFDqI" },
+      { role: "Communion", title: "On Eagle's Wings", composer: "Joncas", videoId: "65kMjfuMWyw" },
+      { role: "Communion", title: "This Alone", composer: "Tim Manion", videoId: "ccHVZMGiBEg" },
+      { role: "Recessional", title: "One Spirit, One Church", composer: "Kevin Keil / Maryanne Quinlivan", videoId: "nF0GoEUuMoE" }
     ],
     optionalSongs: []
   },
@@ -331,11 +332,11 @@ window.CHOIR_PLANS_FALLBACK = [
       { label: "All PDFs", url: "https://drive.google.com/file/d/1gu84Qib1N9_IfUslvfQ2oPFqllKF_iZ8/view?usp=sharing" }
     ],
     songs: [
-      { role: "Entrance", title: "Take Up Your Cross", composer: "", videoId: "" },
-      { role: "Preparation of Gifts", title: "I Will Choose Christ", composer: "", videoId: "" },
-      { role: "Communion", title: "Loving and Forgiving", composer: "Soper", videoId: "" },
-      { role: "Communion", title: "Taste and See", composer: "Moore", videoId: "" },
-      { role: "Recessional", title: "Take the Word of God with You", composer: "Walker", videoId: "" }
+      { role: "Entrance", title: "Take Up Your Cross", composer: "", videoId: "HZboEnq9I4k" },
+      { role: "Preparation of Gifts", title: "I Will Choose Christ", composer: "", videoId: "L793clHztwo" },
+      { role: "Communion", title: "Loving and Forgiving", composer: "Soper", videoId: "P3S32Rz6HBU" },
+      { role: "Communion", title: "Taste and See", composer: "Moore", videoId: "gcn1-9Fg0WA" },
+      { role: "Recessional", title: "Take the Word of God with You", composer: "Walker", videoId: "ztA_P2Dq2tk" }
     ],
     optionalSongs: []
   }
