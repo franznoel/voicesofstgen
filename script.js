@@ -168,6 +168,7 @@ const galleryDialogEl = document.querySelector("#gallery-dialog");
 const galleryDialogImageEl = document.querySelector("#gallery-dialog-image");
 const galleryDialogVideoEl = document.querySelector("#gallery-dialog-video");
 const galleryDialogCaptionEl = document.querySelector("#gallery-dialog-caption");
+const pageStatusEl = document.querySelector("#page-status");
 
 let selectedPlan = getCurrentPlan(choirPlans, TODAY);
 let selectedGalleryIndex = 0;
@@ -234,7 +235,13 @@ function renderCurrentPlan(plan) {
         </div>
         ${renderPdfLinks(plan.pdfLinks)}
       </div>
-      <div class="song-table" aria-label="${escapeHtml(plan.title)} song plan">
+      <div class="song-table" role="table" aria-label="${escapeAttribute(plan.title)} song plan">
+        <div class="song-table-header visually-hidden" role="row">
+          <span role="columnheader">Part of Mass</span>
+          <span role="columnheader">Song</span>
+          <span role="columnheader">Composer</span>
+          <span role="columnheader">Practice video</span>
+        </div>
         ${plan.songs.map(renderSongRow).join("")}
         ${plan.optionalSongs.map(renderOptionalSongRow).join("")}
       </div>
@@ -256,14 +263,14 @@ function renderSongRow(song) {
     : `<span class="song-note">No video</span>`;
 
   return `
-    <div class="song-row">
-      <div class="song-role">${escapeHtml(song.role)}</div>
-      <div>
+    <div class="song-row" role="row">
+      <div class="song-role" role="cell">${escapeHtml(song.role)}</div>
+      <div role="cell">
         <div class="song-title">${escapeHtml(song.title)}</div>
         ${song.notes ? `<div class="song-note">${escapeHtml(song.notes)}</div>` : ""}
       </div>
-      <div class="song-composer">${escapeHtml(song.composer || "")}</div>
-      ${videoLink}
+      <div class="song-composer" role="cell">${escapeHtml(song.composer || "") || '<span class="visually-hidden">Not listed</span>'}</div>
+      <div role="cell">${videoLink}</div>
     </div>
   `;
 }
@@ -276,7 +283,7 @@ function renderPdfLinks(pdfLinks) {
   return `
     <div class="pdf-links" aria-label="PDF links">
       ${pdfLinks.map((pdf) => `
-        <a href="${pdf.url}" target="_blank" rel="noreferrer">${escapeHtml(pdf.label)}</a>
+        <a href="${pdf.url}" target="_blank" rel="noreferrer" aria-label="${escapeAttribute(pdf.label)} (opens in a new tab)">${escapeHtml(pdf.label)}</a>
       `).join("")}
     </div>
   `;
@@ -311,7 +318,10 @@ function setupPlanSelection() {
         is_archived: selectedPlan.date < getActivePlanCutoffDateString(TODAY),
       });
       render();
-      document.querySelector("#current-sunday").scrollIntoView({ behavior: "smooth", block: "start" });
+      pageStatusEl.textContent = `${selectedPlan.title}, ${formatDate(selectedPlan.date)}, is now displayed.`;
+      const currentSundaySection = document.querySelector("#current-sunday");
+      currentSundaySection.scrollIntoView({ behavior: getScrollBehavior(), block: "start" });
+      currentSundaySection.focus({ preventScroll: true });
     });
   });
 }
@@ -351,7 +361,7 @@ function renderCalendarEvent(item) {
         <h3>${escapeHtml(plan.title)}</h3>
         <p>8:30 AM Mass &middot; ${plan.songs.length} songs &middot; ${videos.length} practice videos &middot; ${pdfCount || "No"} PDF ${pdfCount === 1 ? "packet" : "packets"}</p>
       </div>
-      <button class="select-plan calendar-select" type="button" data-plan-date="${plan.date}">
+      <button class="select-plan calendar-select" type="button" data-plan-date="${plan.date}"${isCurrent ? ' aria-current="true"' : ""}>
         ${isCurrent ? "Viewing" : "View plan"}
       </button>
     </article>
@@ -394,7 +404,7 @@ function renderPlanCard(plan) {
         <time datetime="${plan.date}">${formatDate(plan.date)}</time>
         <h3>${escapeHtml(plan.title)}</h3>
         <ul>${songPreview}</ul>
-        <button class="select-plan" type="button" data-plan-date="${plan.date}">
+        <button class="select-plan" type="button" data-plan-date="${plan.date}"${isCurrent ? ' aria-current="true"' : ""}>
           ${isCurrent ? "Viewing" : "View songs"}
         </button>
       </article>
@@ -634,6 +644,12 @@ function loadVideo(button) {
       allowfullscreen
     ></iframe>
   `;
+
+  shell.querySelector("iframe").focus();
+}
+
+function getScrollBehavior() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
 }
 
 function setupGlobalAnalytics() {

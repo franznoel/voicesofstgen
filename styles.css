@@ -6,7 +6,7 @@
   --ink: #20272c;
   --muted: #667078;
   --line: #ddd6ca;
-  --gold: #b68a33;
+  --gold: #8a651f;
   --gold-dark: #7a5b1e;
   --green: #355f4c;
   --red: #8b3533;
@@ -32,6 +32,24 @@ body {
 
 a {
   color: inherit;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+:where(a, button, [tabindex]):focus-visible {
+  outline: 3px solid #1670c5;
+  outline-offset: 3px;
 }
 
 button,
@@ -162,11 +180,9 @@ select {
   text-decoration: none;
 }
 
-.nav-links a:focus,
 .nav-links a:hover {
   background: rgba(255, 255, 255, 0.16);
   color: #fff;
-  outline: none;
 }
 
 .hero {
@@ -329,6 +345,10 @@ main {
   display: grid;
 }
 
+.song-table-header {
+  grid-template-columns: minmax(7rem, 0.8fr) minmax(0, 1.4fr) minmax(0, 1fr) auto;
+}
+
 .song-row {
   display: grid;
   gap: 0.45rem;
@@ -398,7 +418,6 @@ main {
 .archive-toggle:focus-visible,
 .archive-toggle:hover {
   border-color: var(--gold);
-  outline: none;
 }
 
 .archive-panel[hidden],
@@ -548,7 +567,6 @@ main {
 .gallery-item:hover {
   border-color: var(--gold);
   box-shadow: 0 12px 30px rgba(32, 39, 44, 0.12);
-  outline: none;
 }
 
 .gallery-thumbnail {
@@ -658,7 +676,6 @@ main {
 .dialog-close:focus-visible,
 .dialog-close:hover {
   background: #f3d791;
-  outline: none;
 }
 
 .gallery-dialog p {
@@ -779,7 +796,6 @@ main {
 .calendar-actions a:hover,
 .calendar-actions a:focus-visible {
   border-color: var(--gold);
-  outline: none;
 }
 
 .site-footer {
@@ -876,5 +892,21 @@ main {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .load-video::after,
+  .gallery-thumbnail.video-thumbnail::after {
+    border: 2px solid ButtonText;
   }
 }
