@@ -186,7 +186,7 @@ function getPagePdfLinks(page) {
 
 function isPdfLikeLink(link) {
   const evidence = `${link.text || ""} ${link.context || ""} ${link.url || ""}`;
-  return /\bpdfs?\b/i.test(evidence) || /\.pdf(?:$|[?#])/i.test(link.url);
+  return /\bp\s*dfs?\b/i.test(evidence) || /\.pdf(?:$|[?#])/i.test(link.url);
 }
 
 function getPdfLabel(link) {
@@ -204,7 +204,7 @@ function matchLinksByReadableTextOrder(page, links, planMatchers) {
     return [];
   }
 
-  const markers = [...page.text.matchAll(/\b(?:all\s+pdfs?|the\s+prayer\s+pdf|pdf)\b/gi)];
+  const markers = [...page.text.matchAll(/\b(?:all\s+p\s*dfs?|the\s+prayer\s+p\s*df|p\s*df)\b/gi)];
   const sections = findPlanSections(page.text, planMatchers);
   const matches = [];
   const markerCount = Math.min(markers.length, links.length);
@@ -301,17 +301,20 @@ function getPlanDatePatterns(date) {
     .format(new Date(Date.UTC(year, month - 1, day)));
   const dayText = String(day);
   const paddedDay = String(day).padStart(2, "0");
+  const fullYearPattern = String(year).split("").join("\\s*");
+  const shortYearPattern = String(year).slice(-2).split("").join("\\s*");
 
   return [
     new RegExp(`\\b${escapeRegExp(monthName)}\\s+${dayText},\\s*${year}\\b`, "i"),
     new RegExp(`\\b${escapeRegExp(monthName)}\\s+${paddedDay},\\s*${year}\\b`, "i"),
     new RegExp(`\\b${escapeRegExp(monthName)}\\s+${dayText}\\b`, "i"),
-    new RegExp(`\\b${escapeRegExp(monthName)}\\s+${paddedDay}\\b`, "i")
+    new RegExp(`\\b${escapeRegExp(monthName)}\\s+${paddedDay}\\b`, "i"),
+    new RegExp(`\\b0?${month}\\s*\\/\\s*0?${day}\\s*\\/\\s*(?:${fullYearPattern}|${shortYearPattern})\\b`, "i")
   ];
 }
 
 function getDateMarkerPattern() {
-  return /\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}(?:,\s*\d{4})?\b/gi;
+  return /\b(?:(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}(?:,\s*\d{4})?|\d{1,2}\s*\/\s*\d{1,2}\s*\/\s*\d(?:\s*\d){1,3})\b/gi;
 }
 
 function getPlanTitlePattern(title) {
@@ -321,7 +324,7 @@ function getPlanTitlePattern(title) {
     .filter(Boolean)
     .map(escapeRegExp);
 
-  return new RegExp(`\\b${words.join("\\s+")}\\b`, "i");
+  return new RegExp(`\\b${words.join("[^a-z0-9]+")}\\b`, "i");
 }
 
 function uniqueCandidates(candidates) {

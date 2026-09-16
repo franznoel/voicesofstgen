@@ -219,6 +219,44 @@ test("does not carry a known section across an intervening unknown date", () => 
   assert.equal(report.warnings[0].url, "https://drive.google.com/file/d/july-13/view");
 });
 
+test("matches spaced numeric dates and spaced PDF labels from Google Sites", () => {
+  const plans = [
+    {
+      date: "2026-09-20",
+      title: "Twenty-fifth Sunday in Ordinary Time (A)",
+      pdfLinks: [],
+      songs: [],
+      optionalSongs: []
+    },
+    {
+      date: "2026-09-27",
+      title: "Twenty-sixth Sunday in Ordinary Time (A)",
+      pdfLinks: [],
+      songs: [],
+      optionalSongs: []
+    }
+  ];
+  const scrape = {
+    pages: [
+      {
+        title: "Exaltation",
+        text: "Twenty-fifth Sunday in Ordinary Time 09/ 20 /2 6 All PDFs Entrance Canticle of the Sun Twenty-sixth Sunday in Ordinary Time 09/2 7 /2 6 ALL P DFs Entrance Holy Holy Holy",
+        driveLinks: [
+          { url: "https://drive.google.com/file/d/september-20/view", text: "All PDFs", context: "All PDFs Entrance" },
+          { url: "https://drive.google.com/file/d/september-27/view", text: "ALL P DFs", context: "ALL P DFs Entrance" }
+        ],
+        pdfLinks: []
+      }
+    ]
+  };
+
+  const { plans: generatedPlans, report } = generatePlansWithPdfLinks(plans, scrape);
+
+  assert.equal(generatedPlans[0].pdfLinks[0].url, "https://drive.google.com/file/d/september-20/view?usp=sharing");
+  assert.equal(generatedPlans[1].pdfLinks[0].url, "https://drive.google.com/file/d/september-27/view?usp=sharing");
+  assert.equal(report.warnings.length, 0);
+});
+
 test("formatted generated output is stable for idempotent comparisons", () => {
   const output = formatPlanData("CHOIR_PLANS_GENERATED", fallbackPlans);
 

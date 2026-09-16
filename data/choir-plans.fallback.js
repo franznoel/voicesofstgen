@@ -399,5 +399,57 @@ window.CHOIR_PLANS_FALLBACK = [
       { role: "Recessional", title: "Lead Me, Lord", composer: "Becker", videoId: "" }
     ],
     optionalSongs: []
+  },
+  {
+    date: "2026-10-04",
+    title: "Twenty-seventh Sunday in Ordinary Time (A)",
+    pdfLinks: [],
+    songs: [
+      { role: "Entrance", title: "For the Beauty of the Earth", composer: "Dix", videoId: "" },
+      { role: "Offertory", title: "One Bread, One Body", composer: "Foley", videoId: "" },
+      { role: "Communion", title: "Take and Eat", composer: "Joncas", videoId: "" },
+      { role: "Communion", title: "Pan de Vida", composer: "Hurd", videoId: "" },
+      { role: "Recessional", title: "I Will Choose Christ", composer: "Tom Booth", videoId: "" }
+    ],
+    optionalSongs: []
+  },
+  {
+    date: "2026-10-11",
+    title: "Twenty-eighth Sunday in Ordinary Time (A)",
+    pdfLinks: [],
+    songs: [
+      { role: "Entrance", title: "Ven al Banquete / Come to the Feast", composer: "Hurd", videoId: "" },
+      { role: "Offertory", title: "Shepherd Me, O God", composer: "Haugen", videoId: "" },
+      { role: "Communion", title: "The Supper of the Lord", composer: "Rosania", videoId: "" },
+      { role: "Communion", title: "Taste and See", composer: "Angrisano", videoId: "" },
+      { role: "Recessional", title: "We Belong to You", composer: "Thomson", videoId: "" }
+    ],
+    optionalSongs: []
+  },
+  {
+    date: "2026-10-18",
+    title: "Twenty-ninth Sunday in Ordinary Time (A)",
+    pdfLinks: [],
+    songs: [
+      { role: "Entrance", title: "Table of Plenty", composer: "", videoId: "" },
+      { role: "Offertory", title: "Here I Am, Lord", composer: "", videoId: "" },
+      { role: "Communion", title: "Bread of Angels", composer: "", videoId: "" },
+      { role: "Communion", title: "Spirit and Grace", composer: "Manalo", videoId: "" },
+      { role: "Recessional", title: "Go Out, Go Out", composer: "", videoId: "" }
+    ],
+    optionalSongs: []
+  },
+  {
+    date: "2026-10-25",
+    title: "Thirtieth Sunday in Ordinary Time (A)",
+    pdfLinks: [],
+    songs: [
+      { role: "Entrance", title: "Our God Is Here", composer: "Muglia", videoId: "" },
+      { role: "Offertory", title: "Only This I Want", composer: "Schutte", videoId: "" },
+      { role: "Communion", title: "The Eyes and Hands of Christ", composer: "Kendzia", videoId: "" },
+      { role: "Communion", title: "Miracle of Grace", composer: "", videoId: "" },
+      { role: "Recessional", title: "City of God", composer: "Schutte", videoId: "" }
+    ],
+    optionalSongs: []
   }
 ];

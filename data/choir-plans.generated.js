@@ -389,7 +389,7 @@ window.CHOIR_PLANS_GENERATED = [
     "pdfLinks": [
       {
         "label": "All PDFs",
-        "url": "https://drive.google.com/file/d/150uui7Pw2a52SxKuM27pwaV9HBRq30e0/view?usp=sharing"
+        "url": "https://drive.google.com/file/d/1gre-KriAwqTGnd1HRKXdCSAWwZ1J-qqa/view?usp=sharing"
       }
     ],
     "songs": [
@@ -423,12 +423,7 @@ window.CHOIR_PLANS_GENERATED = [
   {
     "date": "2026-06-07",
     "title": "The Most Holy Body and Blood of Christ (A)",
-    "pdfLinks": [
-      {
-        "label": "All PDFs",
-        "url": "https://drive.google.com/file/d/1oTW0ZrBc0VOVWct-j8KUrQl9xBlblLgQ/view?usp=sharing"
-      }
-    ],
+    "pdfLinks": [],
     "songs": [
       {
         "role": "Entrance",
@@ -472,12 +467,7 @@ window.CHOIR_PLANS_GENERATED = [
   {
     "date": "2026-06-14",
     "title": "Eleventh Sunday in Ordinary Time (A)",
-    "pdfLinks": [
-      {
-        "label": "All PDFs",
-        "url": "https://drive.google.com/file/d/1yoeqq2JlF__AZPZXt73MHT-rcMl1e_0i/view?usp=sharing"
-      }
-    ],
+    "pdfLinks": [],
     "songs": [
       {
         "role": "Note",
@@ -526,12 +516,7 @@ window.CHOIR_PLANS_GENERATED = [
   {
     "date": "2026-06-21",
     "title": "Twelfth Sunday in Ordinary Time (A)",
-    "pdfLinks": [
-      {
-        "label": "All PDFs",
-        "url": "https://drive.google.com/file/d/1qtT2ALZgYmatnlJ0JJRKj0TYT1wqzZad/view?usp=sharing"
-      }
-    ],
+    "pdfLinks": [],
     "songs": [
       {
         "role": "Entrance",
@@ -575,12 +560,7 @@ window.CHOIR_PLANS_GENERATED = [
   {
     "date": "2026-06-28",
     "title": "Thirteenth Sunday in Ordinary Time (A)",
-    "pdfLinks": [
-      {
-        "label": "All PDFs",
-        "url": "https://drive.google.com/file/d/108JaB95fymZLX9fLdEnYnI7RvamvDCJl/view?usp=sharing"
-      }
-    ],
+    "pdfLinks": [],
     "songs": [
       {
         "role": "Entrance",
@@ -1002,7 +982,7 @@ window.CHOIR_PLANS_GENERATED = [
     "pdfLinks": [
       {
         "label": "All PDFs",
-        "url": "https://drive.google.com/file/d/1gu84Qib1N9_IfUslvfQ2oPFqllKF_iZ8/view?usp=sharing"
+        "url": "https://drive.google.com/file/d/1hPGMaILxKIjiusgX5pCkGWWH4jNpjqaV/view?usp=sharing"
       }
     ],
     "songs": [
@@ -1131,7 +1111,7 @@ window.CHOIR_PLANS_GENERATED = [
     "pdfLinks": [
       {
         "label": "All PDFs",
-        "url": "https://drive.google.com/file/d/1rB_bNK0SBkNxWl4nkcV34cmqNwjoDOd2/view?usp=sharing"
+        "url": "https://drive.google.com/file/d/1oqmIL7SygWIxTnGKj6It55qf0Ov3GDT2/view?usp=sharing"
       }
     ],
     "songs": [
@@ -1174,7 +1154,7 @@ window.CHOIR_PLANS_GENERATED = [
     "pdfLinks": [
       {
         "label": "All PDFs",
-        "url": "https://drive.google.com/file/d/1gixKiQxNpHlh3hCwCn1GQL5YACWpwVnw/view?usp=sharing"
+        "url": "https://drive.google.com/file/d/1VVjjz8YrjiI3MMoVVP57y4QWgkKjWOQ-/view?usp=sharing"
       }
     ],
     "songs": [
@@ -1206,6 +1186,178 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Recessional",
         "title": "Lead Me, Lord",
         "composer": "Becker",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-10-04",
+    "title": "Twenty-seventh Sunday in Ordinary Time (A)",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/16qgBtFegg_NGdSmC1I2zE5UUUVdGWLxM/view?usp=sharing"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "For the Beauty of the Earth",
+        "composer": "Dix",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "One Bread, One Body",
+        "composer": "Foley",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Take and Eat",
+        "composer": "Joncas",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Pan de Vida",
+        "composer": "Hurd",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "I Will Choose Christ",
+        "composer": "Tom Booth",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-10-11",
+    "title": "Twenty-eighth Sunday in Ordinary Time (A)",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1lImlqthjM1m8Gec5yvMLm1mXrt7XzhK_/view?usp=sharing"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Ven al Banquete / Come to the Feast",
+        "composer": "Hurd",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "Shepherd Me, O God",
+        "composer": "Haugen",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "The Supper of the Lord",
+        "composer": "Rosania",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Taste and See",
+        "composer": "Angrisano",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "We Belong to You",
+        "composer": "Thomson",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-10-18",
+    "title": "Twenty-ninth Sunday in Ordinary Time (A)",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1n_v-Bczn0Ew0ZMxZwuz8SnVJmkTCBMCV/view?usp=sharing"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Table of Plenty",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "Here I Am, Lord",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Bread of Angels",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Spirit and Grace",
+        "composer": "Manalo",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Go Out, Go Out",
+        "composer": "",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-10-25",
+    "title": "Thirtieth Sunday in Ordinary Time (A)",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1Vw1bWe62ls_yObeqbd-R6Q1Mmk4u5LTA/view?usp=sharing"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Our God Is Here",
+        "composer": "Muglia",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "Only This I Want",
+        "composer": "Schutte",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "The Eyes and Hands of Christ",
+        "composer": "Kendzia",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Miracle of Grace",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "City of God",
+        "composer": "Schutte",
         "videoId": ""
       }
     ],
