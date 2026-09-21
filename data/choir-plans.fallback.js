@@ -288,8 +288,8 @@ window.CHOIR_PLANS_FALLBACK = [
       { label: "All PDFs", url: "https://drive.google.com/file/d/1TWi9wH224rRWyAYtPudDMdkG-gM1Cuf6/view?usp=sharing" }
     ],
     songs: [
-      { role: "Entrance", title: "Song of Mary", composer: "Dan Schutte · BB 696", videoId: "" },
-      { role: "Preparation of Gifts", title: "Holy Mary, Revealing Your Son", composer: "Manalo · BB 694", videoId: "" },
+      { role: "Entrance", title: "Song of Mary", composer: "Dan Schutte · BB 696", videoId: "jMt9t52glws" },
+      { role: "Preparation of Gifts", title: "Holy Mary, Revealing Your Son", composer: "Manalo · BB 694", videoId: "stder3qe37A" },
       { role: "Communion", title: "Hail Mary, Gentle Woman", composer: "", videoId: "" },
       { role: "Recessional", title: "Hail, Holy Queen", composer: "Traditional · BB 200", videoId: "" }
     ],
@@ -377,11 +377,11 @@ window.CHOIR_PLANS_FALLBACK = [
       { label: "All PDFs", url: "https://drive.google.com/file/d/1rB_bNK0SBkNxWl4nkcV34cmqNwjoDOd2/view?usp=sharing" }
     ],
     songs: [
-      { role: "Entrance", title: "Canticle of the Sun", composer: "Haugen", videoId: "" },
+      { role: "Entrance", title: "Canticle of the Sun", composer: "Haugen", videoId: "-2R180JStUM" },
       { role: "Offertory", title: "Shepherd Me, O God", composer: "Marty Haugen", videoId: "" },
-      { role: "Communion", title: "I Received the Living God", composer: "", videoId: "" },
-      { role: "Communion", title: "Because the Lord Is My Shepherd", composer: "Walker", videoId: "" },
-      { role: "Recessional", title: "With One Voice", composer: "Manalo", videoId: "" }
+      { role: "Communion", title: "I Received the Living God", composer: "", videoId: "7aDMY9xU_6U" },
+      { role: "Communion", title: "Because the Lord Is My Shepherd", composer: "Walker", videoId: "o1oTLkhE9qM" },
+      { role: "Recessional", title: "With One Voice", composer: "Manalo", videoId: "wwXtDuLFHJg" }
     ],
     optionalSongs: []
   },
@@ -392,11 +392,11 @@ window.CHOIR_PLANS_FALLBACK = [
       { label: "All PDFs", url: "https://drive.google.com/file/d/1gixKiQxNpHlh3hCwCn1GQL5YACWpwVnw/view?usp=sharing" }
     ],
     songs: [
-      { role: "Entrance", title: "Holy, Holy, Holy", composer: "Nicaea", videoId: "" },
-      { role: "Offertory", title: "Jesus the Lord", composer: "Roc O'Connor", videoId: "" },
-      { role: "Communion", title: "The Cry of the Poor", composer: "John Foley", videoId: "" },
-      { role: "Communion", title: "Bread of Angels", composer: "", videoId: "" },
-      { role: "Recessional", title: "Lead Me, Lord", composer: "Becker", videoId: "" }
+      { role: "Entrance", title: "Holy, Holy, Holy", composer: "Nicaea", videoId: "ntdcY8q7a9E" },
+      { role: "Offertory", title: "Jesus the Lord", composer: "Roc O'Connor", videoId: "V7uJ-gWcif0" },
+      { role: "Communion", title: "The Cry of the Poor", composer: "John Foley", videoId: "3aqTngprDY4" },
+      { role: "Communion", title: "Bread of Angels", composer: "", videoId: "0XMGRUUFr0M" },
+      { role: "Recessional", title: "Lead Me, Lord", composer: "Becker", videoId: "Oivf0HdHlV8" }
     ],
     optionalSongs: []
   },
@@ -406,10 +406,10 @@ window.CHOIR_PLANS_FALLBACK = [
     pdfLinks: [],
     songs: [
       { role: "Entrance", title: "For the Beauty of the Earth", composer: "Dix", videoId: "" },
-      { role: "Offertory", title: "One Bread, One Body", composer: "Foley", videoId: "" },
-      { role: "Communion", title: "Take and Eat", composer: "Joncas", videoId: "" },
+      { role: "Offertory", title: "One Bread, One Body", composer: "Foley", videoId: "m_lofSwVdwM" },
+      { role: "Communion", title: "Take and Eat", composer: "Joncas", videoId: "XkvOnb2fsvU" },
       { role: "Communion", title: "Pan de Vida", composer: "Hurd", videoId: "" },
-      { role: "Recessional", title: "I Will Choose Christ", composer: "Tom Booth", videoId: "" }
+      { role: "Recessional", title: "I Will Choose Christ", composer: "Tom Booth", videoId: "L793clHztwo" }
     ],
     optionalSongs: []
   },
@@ -418,10 +418,10 @@ window.CHOIR_PLANS_FALLBACK = [
     title: "Twenty-eighth Sunday in Ordinary Time (A)",
     pdfLinks: [],
     songs: [
-      { role: "Entrance", title: "Ven al Banquete / Come to the Feast", composer: "Hurd", videoId: "" },
+      { role: "Entrance", title: "Ven al Banquete / Come to the Feast", composer: "Hurd", videoId: "D_6O-RqkMtI" },
       { role: "Offertory", title: "Shepherd Me, O God", composer: "Haugen", videoId: "" },
-      { role: "Communion", title: "The Supper of the Lord", composer: "Rosania", videoId: "" },
-      { role: "Communion", title: "Taste and See", composer: "Angrisano", videoId: "" },
+      { role: "Communion", title: "The Supper of the Lord", composer: "Rosania", videoId: "7D2E6QWBINg" },
+      { role: "Communion", title: "Taste and See", composer: "Angrisano", videoId: "gcn1-9Fg0WA" },
       { role: "Recessional", title: "We Belong to You", composer: "Thomson", videoId: "" }
     ],
     optionalSongs: []
@@ -431,11 +431,11 @@ window.CHOIR_PLANS_FALLBACK = [
     title: "Twenty-ninth Sunday in Ordinary Time (A)",
     pdfLinks: [],
     songs: [
-      { role: "Entrance", title: "Table of Plenty", composer: "", videoId: "" },
-      { role: "Offertory", title: "Here I Am, Lord", composer: "", videoId: "" },
-      { role: "Communion", title: "Bread of Angels", composer: "", videoId: "" },
+      { role: "Entrance", title: "Table of Plenty", composer: "", videoId: "okAMb_ra8Uw" },
+      { role: "Offertory", title: "Here I Am, Lord", composer: "", videoId: "zBg-yDhM2KY" },
+      { role: "Communion", title: "Bread of Angels", composer: "", videoId: "0XMGRUUFr0M" },
       { role: "Communion", title: "Spirit and Grace", composer: "Manalo", videoId: "" },
-      { role: "Recessional", title: "Go Out, Go Out", composer: "", videoId: "" }
+      { role: "Recessional", title: "Go Out, Go Out", composer: "", videoId: "bdiEEVIhvPI" }
     ],
     optionalSongs: []
   },
@@ -444,11 +444,11 @@ window.CHOIR_PLANS_FALLBACK = [
     title: "Thirtieth Sunday in Ordinary Time (A)",
     pdfLinks: [],
     songs: [
-      { role: "Entrance", title: "Our God Is Here", composer: "Muglia", videoId: "" },
-      { role: "Offertory", title: "Only This I Want", composer: "Schutte", videoId: "" },
+      { role: "Entrance", title: "Our God Is Here", composer: "Muglia", videoId: "WtSnIxnIB3k" },
+      { role: "Offertory", title: "Only This I Want", composer: "Schutte", videoId: "bd5rw267OfU" },
       { role: "Communion", title: "The Eyes and Hands of Christ", composer: "Kendzia", videoId: "" },
-      { role: "Communion", title: "Miracle of Grace", composer: "", videoId: "" },
-      { role: "Recessional", title: "City of God", composer: "Schutte", videoId: "" }
+      { role: "Communion", title: "Miracle of Grace", composer: "", videoId: "-tg7539_wOE" },
+      { role: "Recessional", title: "City of God", composer: "Schutte", videoId: "kXZTYV1Pq_M" }
     ],
     optionalSongs: []
   }

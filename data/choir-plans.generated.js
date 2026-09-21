@@ -867,13 +867,13 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Entrance",
         "title": "Song of Mary",
         "composer": "Dan Schutte · BB 696",
-        "videoId": ""
+        "videoId": "jMt9t52glws"
       },
       {
         "role": "Preparation of Gifts",
         "title": "Holy Mary, Revealing Your Son",
         "composer": "Manalo · BB 694",
-        "videoId": ""
+        "videoId": "stder3qe37A"
       },
       {
         "role": "Communion",
@@ -1119,7 +1119,7 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Entrance",
         "title": "Canticle of the Sun",
         "composer": "Haugen",
-        "videoId": ""
+        "videoId": "-2R180JStUM"
       },
       {
         "role": "Offertory",
@@ -1131,19 +1131,19 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Communion",
         "title": "I Received the Living God",
         "composer": "",
-        "videoId": ""
+        "videoId": "7aDMY9xU_6U"
       },
       {
         "role": "Communion",
         "title": "Because the Lord Is My Shepherd",
         "composer": "Walker",
-        "videoId": ""
+        "videoId": "o1oTLkhE9qM"
       },
       {
         "role": "Recessional",
         "title": "With One Voice",
         "composer": "Manalo",
-        "videoId": ""
+        "videoId": "wwXtDuLFHJg"
       }
     ],
     "optionalSongs": []
@@ -1162,31 +1162,31 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Entrance",
         "title": "Holy, Holy, Holy",
         "composer": "Nicaea",
-        "videoId": ""
+        "videoId": "ntdcY8q7a9E"
       },
       {
         "role": "Offertory",
         "title": "Jesus the Lord",
         "composer": "Roc O'Connor",
-        "videoId": ""
+        "videoId": "V7uJ-gWcif0"
       },
       {
         "role": "Communion",
         "title": "The Cry of the Poor",
         "composer": "John Foley",
-        "videoId": ""
+        "videoId": "3aqTngprDY4"
       },
       {
         "role": "Communion",
         "title": "Bread of Angels",
         "composer": "",
-        "videoId": ""
+        "videoId": "0XMGRUUFr0M"
       },
       {
         "role": "Recessional",
         "title": "Lead Me, Lord",
         "composer": "Becker",
-        "videoId": ""
+        "videoId": "Oivf0HdHlV8"
       }
     ],
     "optionalSongs": []
@@ -1211,13 +1211,13 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Offertory",
         "title": "One Bread, One Body",
         "composer": "Foley",
-        "videoId": ""
+        "videoId": "m_lofSwVdwM"
       },
       {
         "role": "Communion",
         "title": "Take and Eat",
         "composer": "Joncas",
-        "videoId": ""
+        "videoId": "XkvOnb2fsvU"
       },
       {
         "role": "Communion",
@@ -1229,7 +1229,7 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Recessional",
         "title": "I Will Choose Christ",
         "composer": "Tom Booth",
-        "videoId": ""
+        "videoId": "L793clHztwo"
       }
     ],
     "optionalSongs": []
@@ -1248,7 +1248,7 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Entrance",
         "title": "Ven al Banquete / Come to the Feast",
         "composer": "Hurd",
-        "videoId": ""
+        "videoId": "D_6O-RqkMtI"
       },
       {
         "role": "Offertory",
@@ -1260,13 +1260,13 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Communion",
         "title": "The Supper of the Lord",
         "composer": "Rosania",
-        "videoId": ""
+        "videoId": "7D2E6QWBINg"
       },
       {
         "role": "Communion",
         "title": "Taste and See",
         "composer": "Angrisano",
-        "videoId": ""
+        "videoId": "gcn1-9Fg0WA"
       },
       {
         "role": "Recessional",
@@ -1291,19 +1291,19 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Entrance",
         "title": "Table of Plenty",
         "composer": "",
-        "videoId": ""
+        "videoId": "okAMb_ra8Uw"
       },
       {
         "role": "Offertory",
         "title": "Here I Am, Lord",
         "composer": "",
-        "videoId": ""
+        "videoId": "zBg-yDhM2KY"
       },
       {
         "role": "Communion",
         "title": "Bread of Angels",
         "composer": "",
-        "videoId": ""
+        "videoId": "0XMGRUUFr0M"
       },
       {
         "role": "Communion",
@@ -1315,7 +1315,7 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Recessional",
         "title": "Go Out, Go Out",
         "composer": "",
-        "videoId": ""
+        "videoId": "bdiEEVIhvPI"
       }
     ],
     "optionalSongs": []
@@ -1334,13 +1334,13 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Entrance",
         "title": "Our God Is Here",
         "composer": "Muglia",
-        "videoId": ""
+        "videoId": "WtSnIxnIB3k"
       },
       {
         "role": "Offertory",
         "title": "Only This I Want",
         "composer": "Schutte",
-        "videoId": ""
+        "videoId": "bd5rw267OfU"
       },
       {
         "role": "Communion",
@@ -1352,13 +1352,13 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Communion",
         "title": "Miracle of Grace",
         "composer": "",
-        "videoId": ""
+        "videoId": "-tg7539_wOE"
       },
       {
         "role": "Recessional",
         "title": "City of God",
         "composer": "Schutte",
-        "videoId": ""
+        "videoId": "kXZTYV1Pq_M"
       }
     ],
     "optionalSongs": []

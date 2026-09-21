@@ -1,0 +1,57 @@
+name: Match YouTube Videos
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/choir-plans.fallback.js"
+
+permissions:
+  contents: write
+
+jobs:
+  match:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Match YouTube practice videos
+        run: npm run match:youtube
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+
+      - name: Regenerate choir plans
+        run: npm run generate:choir-plan-pdfs
+
+      - name: Run checks
+        run: npm run check
+
+      - name: Upload YouTube match report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: choir-video-report
+          path: data/choir-video-report.json
+          if-no-files-found: warn
+
+      - name: Commit accepted YouTube matches
+        run: |
+          if [ -z "$(git status --porcelain -- data/choir-plans.fallback.js data/choir-plans.generated.js)" ]; then
+            echo "No accepted YouTube matches to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/choir-plans.fallback.js data/choir-plans.generated.js
+          git commit -m "Update YouTube practice videos"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

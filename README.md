@@ -52,6 +52,8 @@ The current static data in `script.js` is shaped to be replaceable by Pang CMS l
 
 Practice videos are not embedded on initial page load. The page renders lightweight thumbnail buttons first, then creates a `youtube-nocookie.com` iframe only after a choir member presses play. This keeps the page usable even with many practice videos.
 
+Approved practice videos are stored as a YouTube `videoId` on each song. See [docs/youtube.md](docs/youtube.md) for automatic title-and-composer matching, confidence safeguards, credential requirements, and report review.
+
 ## PostHog Dashboard
 
 The site uses PostHog for pageviews, section clicks, video plays, PDF downloads, gallery opens, archive views, device/browser breakdowns, and referrers.

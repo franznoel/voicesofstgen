@@ -4,3 +4,4 @@ node_modules
 dist
 .env
 data/choir-plan-pdf-report.json
+data/choir-video-report.json
