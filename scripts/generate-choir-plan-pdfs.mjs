@@ -53,8 +53,21 @@ export function generatePlansWithPdfLinks(fallbackPlans, scrape) {
     skippedPlans: [],
     warnings: []
   };
+  const dateCounts = new Map();
+  for (const { date } of fallbackPlans) {
+    dateCounts.set(date, (dateCounts.get(date) || 0) + 1);
+  }
   const candidatesByDate = collectPdfCandidatesByDate(fallbackPlans, scrape, report);
   const plans = fallbackPlans.map((plan) => {
+    if (dateCounts.get(plan.date) > 1) {
+      report.skippedPlans.push({
+        date: plan.date,
+        title: plan.title,
+        reason: "Multiple plans share this date. Keep each plan’s curated PDF links."
+      });
+      return clonePlan(plan);
+    }
+
     const candidates = candidatesByDate.get(plan.date) || [];
 
     if (candidates.length === 0) {

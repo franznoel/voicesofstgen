@@ -1362,5 +1362,594 @@ window.CHOIR_PLANS_GENERATED = [
       }
     ],
     "optionalSongs": []
+  },
+  {
+    "date": "2026-11-01",
+    "title": "All Saints",
+    "massTime": "",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/19BdjQ7VqEPKC4iazTSqeOWT_TT7eeGXR/view"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "For All the Saints",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "Be Not Afraid",
+        "composer": "Bob Dufford",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Worthy Is the Lamb",
+        "composer": "Manalo",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Litany of Saints",
+        "composer": "Becker",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Church of God, Elect and Glorious",
+        "composer": "Hyfrydol",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-11-08",
+    "title": "Thirty-second Sunday in Ordinary Time (A)",
+    "massTime": "",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1N7Tx9uA65Dr6dxd3FJ1KNlE4gUKrc9LF/view"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "On Eagle’s Wings",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "Christ the Lord",
+        "composer": "Hart / Feduccia",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "The Lord Is My Light",
+        "composer": "Walker",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Shepherd Me, O God",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "City of God",
+        "composer": "",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-11-15",
+    "title": "Thirty-third Sunday in Ordinary Time (A)",
+    "massTime": "",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/18CjavVY62-yzBNycKNA1jlPCHld3vLGN/view"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "In This Place",
+        "composer": "Thomson",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "In Every Age",
+        "composer": "Whitaker",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "You Are Near",
+        "composer": "Schutte",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Eye Has Not Seen",
+        "composer": "Haugen",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Kapayapaan, Peace Be with You",
+        "composer": "Nieva",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-11-22",
+    "title": "Our Lord Jesus Christ, King of the Universe (A)",
+    "massTime": "",
+    "pdfLinks": [],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "The King of Kings, Christ Jesus Reigns",
+        "composer": "Ich Glaub An Gott",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "At the Name of Jesus",
+        "composer": "Walker",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Bread for the World",
+        "composer": "Farrell",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Jesus the Lord",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "To Jesus Christ, Our Sovereign King",
+        "composer": "Ich Glaub An Gott",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-11-26",
+    "title": "Thanksgiving Day",
+    "massTime": "",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1ZzifT01xWTFs7YdUEY4Bf1uO7sJ41YTc/view"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Ven al Banquete",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "Spirit and Grace",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Al Partir el Pan / Taste and See",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Somos el Cuerpo de Cristo",
+        "composer": "",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-11-29",
+    "title": "First Sunday of Advent",
+    "massTime": "",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1g71UGKNpRVE1Sw8UELAMqPxxU3Rs2WWh/view"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "O Come, O Come, Emmanuel",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "Christ the Lord",
+        "composer": "Hart / Feduccia",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Beyond the Moon and Stars",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "People, Look East",
+        "composer": "",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-12-06",
+    "title": "Second Sunday of Advent",
+    "massTime": "",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1n4WdiCm3NqX4Z-Z_lkjq8vvnwOKdEIIj/view"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Ready the Way",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "Come, Emmanuel",
+        "composer": "Trevor Thomson",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "A Voice Cries Out",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Soon and Very Soon",
+        "composer": "",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-12-08",
+    "title": "Immaculate Conception of the Blessed Virgin Mary",
+    "massTime": "",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1LW1_KlZ3lctnz-0G0BV9XiYFk3IPHmSX/view"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Song of Mary",
+        "composer": "Schutte",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "Holy Mary, Revealing Your Son",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "O How Blessed",
+        "composer": "Dan Schutte",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Hail Holy Queen (Salve Regina Coelitum)",
+        "composer": "",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-12-13",
+    "title": "Third Sunday of Advent",
+    "massTime": "",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1txEW49KZkddXhFKj91fTU0vcnOPBIZ9d/view"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Emmanuel",
+        "composer": "Angrisano",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "Christ, Be Our Light",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "God of Mercy",
+        "composer": "Manalo",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Ready the Way",
+        "composer": "",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-12-20",
+    "title": "Fourth Sunday of Advent",
+    "massTime": "",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1bFTD_JvHpIBeMqqVYnNq1_vCTTWk4_wm/view"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Come, Lord Jesus",
+        "composer": "Ridge",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "Bread of Life (Advent setting)",
+        "composer": "Farrell",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Bread for the World",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Emmanuel",
+        "composer": "Angrisano",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-12-24",
+    "title": "Christmas Vigil Mass",
+    "massTime": "5:00 PM",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1C436HVOYgjqIDexB5Ja_Gbh9X4rafWKR/view"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "O Come, All Ye Faithful",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "Angels We Have Heard on High",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Silent Night / Night of Silence",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Hark! The Herald Angels Sing",
+        "composer": "",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-12-24",
+    "title": "Christmas Mass During the Night",
+    "massTime": "10:00 PM",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1P_svIHCR4rOh86sx2n-mTjVwoHs05bbd/view"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "O Come, All Ye Faithful",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "Angels We Have Heard on High",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Silent Night",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Hark! The Herald Angels Sing",
+        "composer": "",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-12-25",
+    "title": "Christmas Day",
+    "massTime": "",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/13xLinN5fxrx4FnjSOo1FWXtAKos--Qv-/view"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "O Come, All Ye Faithful",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "Angels We Have Heard on High",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Hark! The Herald Angels Sing",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Joy to the World",
+        "composer": "",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2026-12-27",
+    "title": "Holy Family of Jesus, Mary and Joseph",
+    "massTime": "",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/12s3DXzljhksygm5XJ4rWA_fdE8CwBwNa/view"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Hark! The Herald Angels Sing",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "Away in a Manger",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "The First Noel",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Joy to the World",
+        "composer": "",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
+  },
+  {
+    "date": "2027-01-01",
+    "title": "Mary, the Holy Mother of God",
+    "massTime": "",
+    "pdfLinks": [
+      {
+        "label": "All PDFs",
+        "url": "https://drive.google.com/file/d/1nG27vaEXhsfbMF6T7mhmd9H86cFnqnWR/view"
+      }
+    ],
+    "songs": [
+      {
+        "role": "Entrance",
+        "title": "Angels We Have Heard on High",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Offertory",
+        "title": "There Is a Longing",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Communion",
+        "title": "Silent Night / Away in a Manger",
+        "composer": "",
+        "videoId": ""
+      },
+      {
+        "role": "Recessional",
+        "title": "Let There Be Peace on Earth",
+        "composer": "",
+        "videoId": ""
+      }
+    ],
+    "optionalSongs": []
   }
 ];

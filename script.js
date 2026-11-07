@@ -309,9 +309,9 @@ function renderPlanList() {
 }
 
 function setupPlanSelection() {
-  document.querySelectorAll("[data-plan-date]").forEach((button) => {
+  document.querySelectorAll("[data-plan-index]").forEach((button) => {
     button.addEventListener("click", () => {
-      selectedPlan = choirPlans.find((plan) => plan.date === button.dataset.planDate);
+      selectedPlan = choirPlans[Number(button.dataset.planIndex)];
       trackEvent("plan_selected", {
         plan_date: selectedPlan.date,
         plan_title: selectedPlan.title,
@@ -330,7 +330,7 @@ function renderCalendar() {
   const activePlanCutoffDate = getActivePlanCutoffDateString(TODAY);
   const activePlans = choirPlans
     .filter((plan) => plan.date >= activePlanCutoffDate)
-    .map((plan) => ({ kind: "plan", ...plan }));
+    .map((plan) => ({ kind: "plan", date: plan.date, plan }));
   const activeEvents = choirEvents
     .filter((event) => (event.endDate || event.date) >= activePlanCutoffDate)
     .map((event) => ({ kind: "event", ...event }));
@@ -345,10 +345,11 @@ function renderCalendarEvent(item) {
     return renderChoirEvent(item);
   }
 
-  const plan = item;
-  const isCurrent = plan.date === selectedPlan.date;
+  const { plan } = item;
+  const isCurrent = plan === selectedPlan;
   const videos = getUniqueVideosForPlan(plan);
   const pdfCount = plan.pdfLinks.length;
+  const massTime = plan.massTime ?? "8:30 AM";
 
   return `
     <article class="calendar-event ${isCurrent ? "current" : ""}">
@@ -359,9 +360,9 @@ function renderCalendarEvent(item) {
       <div class="calendar-event-body">
         <time datetime="${plan.date}">${formatDate(plan.date)}</time>
         <h3>${escapeHtml(plan.title)}</h3>
-        <p>8:30 AM Mass &middot; ${plan.songs.length} songs &middot; ${videos.length} practice videos &middot; ${pdfCount || "No"} PDF ${pdfCount === 1 ? "packet" : "packets"}</p>
+        <p>${massTime ? `${escapeHtml(massTime)} Mass &middot; ` : ""} ${plan.songs.length} songs &middot; ${videos.length} practice videos &middot; ${pdfCount || "No"} PDF ${pdfCount === 1 ? "packet" : "packets"}</p>
       </div>
-      <button class="select-plan calendar-select" type="button" data-plan-date="${plan.date}"${isCurrent ? ' aria-current="true"' : ""}>
+      <button class="select-plan calendar-select" type="button" data-plan-index="${choirPlans.indexOf(plan)}"${isCurrent ? ' aria-current="true"' : ""}>
         ${isCurrent ? "Viewing" : "View plan"}
       </button>
     </article>
@@ -396,7 +397,7 @@ function getCalendarKindOrder(kind) {
 }
 
 function renderPlanCard(plan) {
-    const isCurrent = plan.date === selectedPlan.date;
+    const isCurrent = plan === selectedPlan;
     const songPreview = plan.songs.slice(0, 4).map((song) => `<li>${escapeHtml(song.role)}: ${escapeHtml(song.title)}</li>`).join("");
 
     return `
@@ -404,7 +405,7 @@ function renderPlanCard(plan) {
         <time datetime="${plan.date}">${formatDate(plan.date)}</time>
         <h3>${escapeHtml(plan.title)}</h3>
         <ul>${songPreview}</ul>
-        <button class="select-plan" type="button" data-plan-date="${plan.date}"${isCurrent ? ' aria-current="true"' : ""}>
+        <button class="select-plan" type="button" data-plan-index="${choirPlans.indexOf(plan)}"${isCurrent ? ' aria-current="true"' : ""}>
           ${isCurrent ? "Viewing" : "View songs"}
         </button>
       </article>
