@@ -1125,7 +1125,7 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Offertory",
         "title": "Shepherd Me, O God",
         "composer": "Marty Haugen",
-        "videoId": ""
+        "videoId": "jruM_bSvJSg"
       },
       {
         "role": "Communion",
@@ -1384,13 +1384,13 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Offertory",
         "title": "Be Not Afraid",
         "composer": "Bob Dufford",
-        "videoId": ""
+        "videoId": "2oSiX1WKg4w"
       },
       {
         "role": "Communion",
         "title": "Worthy Is the Lamb",
         "composer": "Manalo",
-        "videoId": ""
+        "videoId": "pjA-a04T_6M"
       },
       {
         "role": "Communion",
@@ -1402,7 +1402,7 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Recessional",
         "title": "Church of God, Elect and Glorious",
         "composer": "Hyfrydol",
-        "videoId": ""
+        "videoId": "4aJEtVJ494s"
       }
     ],
     "optionalSongs": []
@@ -1428,13 +1428,13 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Offertory",
         "title": "Christ the Lord",
         "composer": "Hart / Feduccia",
-        "videoId": ""
+        "videoId": "ODn8t2ikHdw"
       },
       {
         "role": "Communion",
         "title": "The Lord Is My Light",
         "composer": "Walker",
-        "videoId": ""
+        "videoId": "ft9gH5IHssE"
       },
       {
         "role": "Communion",
@@ -1446,7 +1446,7 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Recessional",
         "title": "City of God",
         "composer": "",
-        "videoId": ""
+        "videoId": "kXZTYV1Pq_M"
       }
     ],
     "optionalSongs": []
@@ -1466,31 +1466,31 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Entrance",
         "title": "In This Place",
         "composer": "Thomson",
-        "videoId": ""
+        "videoId": "kMcroYiXb7E"
       },
       {
         "role": "Offertory",
         "title": "In Every Age",
         "composer": "Whitaker",
-        "videoId": ""
+        "videoId": "5BxarTJavmY"
       },
       {
         "role": "Communion",
         "title": "You Are Near",
         "composer": "Schutte",
-        "videoId": ""
+        "videoId": "B6QwtsDN4xA"
       },
       {
         "role": "Communion",
         "title": "Eye Has Not Seen",
         "composer": "Haugen",
-        "videoId": ""
+        "videoId": "7jYgOQC82aU"
       },
       {
         "role": "Recessional",
         "title": "Kapayapaan, Peace Be with You",
         "composer": "Nieva",
-        "videoId": ""
+        "videoId": "__6ukoLRgds"
       }
     ],
     "optionalSongs": []
@@ -1505,13 +1505,13 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Entrance",
         "title": "The King of Kings, Christ Jesus Reigns",
         "composer": "Ich Glaub An Gott",
-        "videoId": ""
+        "videoId": "1qbZnhQk_PE"
       },
       {
         "role": "Offertory",
         "title": "At the Name of Jesus",
         "composer": "Walker",
-        "videoId": ""
+        "videoId": "OqmYlU40YHE"
       },
       {
         "role": "Communion",
@@ -1523,13 +1523,13 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Communion",
         "title": "Jesus the Lord",
         "composer": "",
-        "videoId": ""
+        "videoId": "V7uJ-gWcif0"
       },
       {
         "role": "Recessional",
         "title": "To Jesus Christ, Our Sovereign King",
         "composer": "Ich Glaub An Gott",
-        "videoId": ""
+        "videoId": "wol02WZ4AeI"
       }
     ],
     "optionalSongs": []
@@ -1593,7 +1593,7 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Offertory",
         "title": "Christ the Lord",
         "composer": "Hart / Feduccia",
-        "videoId": ""
+        "videoId": "ODn8t2ikHdw"
       },
       {
         "role": "Communion",
@@ -1631,7 +1631,7 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Offertory",
         "title": "Come, Emmanuel",
         "composer": "Trevor Thomson",
-        "videoId": ""
+        "videoId": "ImoDj_T7UOU"
       },
       {
         "role": "Communion",
@@ -1643,7 +1643,7 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Recessional",
         "title": "Soon and Very Soon",
         "composer": "",
-        "videoId": ""
+        "videoId": "7vh10Hx7I9A"
       }
     ],
     "optionalSongs": []
@@ -1663,25 +1663,25 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Entrance",
         "title": "Song of Mary",
         "composer": "Schutte",
-        "videoId": ""
+        "videoId": "jMt9t52glws"
       },
       {
         "role": "Offertory",
         "title": "Holy Mary, Revealing Your Son",
         "composer": "",
-        "videoId": ""
+        "videoId": "stder3qe37A"
       },
       {
         "role": "Communion",
         "title": "O How Blessed",
         "composer": "Dan Schutte",
-        "videoId": ""
+        "videoId": "KsAJfoBdYRQ"
       },
       {
         "role": "Recessional",
         "title": "Hail Holy Queen (Salve Regina Coelitum)",
         "composer": "",
-        "videoId": ""
+        "videoId": "sA_fnTISgWA"
       }
     ],
     "optionalSongs": []
@@ -1701,7 +1701,7 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Entrance",
         "title": "Emmanuel",
         "composer": "Angrisano",
-        "videoId": ""
+        "videoId": "ZFghkY6OwA0"
       },
       {
         "role": "Offertory",
@@ -1757,7 +1757,7 @@ window.CHOIR_PLANS_GENERATED = [
         "role": "Recessional",
         "title": "Emmanuel",
         "composer": "Angrisano",
-        "videoId": ""
+        "videoId": "ZFghkY6OwA0"
       }
     ],
     "optionalSongs": []

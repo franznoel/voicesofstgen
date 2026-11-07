@@ -378,7 +378,7 @@ window.CHOIR_PLANS_FALLBACK = [
     ],
     songs: [
       { role: "Entrance", title: "Canticle of the Sun", composer: "Haugen", videoId: "-2R180JStUM" },
-      { role: "Offertory", title: "Shepherd Me, O God", composer: "Marty Haugen", videoId: "" },
+      { role: "Offertory", title: "Shepherd Me, O God", composer: "Marty Haugen", videoId: "jruM_bSvJSg" },
       { role: "Communion", title: "I Received the Living God", composer: "", videoId: "7aDMY9xU_6U" },
       { role: "Communion", title: "Because the Lord Is My Shepherd", composer: "Walker", videoId: "o1oTLkhE9qM" },
       { role: "Recessional", title: "With One Voice", composer: "Manalo", videoId: "wwXtDuLFHJg" }
@@ -459,10 +459,10 @@ window.CHOIR_PLANS_FALLBACK = [
     pdfLinks: [{"label":"All PDFs","url":"https://drive.google.com/file/d/19BdjQ7VqEPKC4iazTSqeOWT_TT7eeGXR/view"}],
     songs: [
       { role: "Entrance", title: "For All the Saints", composer: "", videoId: "" },
-      { role: "Offertory", title: "Be Not Afraid", composer: "Bob Dufford", videoId: "" },
-      { role: "Communion", title: "Worthy Is the Lamb", composer: "Manalo", videoId: "" },
+      { role: "Offertory", title: "Be Not Afraid", composer: "Bob Dufford", videoId: "2oSiX1WKg4w" },
+      { role: "Communion", title: "Worthy Is the Lamb", composer: "Manalo", videoId: "pjA-a04T_6M" },
       { role: "Communion", title: "Litany of Saints", composer: "Becker", videoId: "" },
-      { role: "Recessional", title: "Church of God, Elect and Glorious", composer: "Hyfrydol", videoId: "" }
+      { role: "Recessional", title: "Church of God, Elect and Glorious", composer: "Hyfrydol", videoId: "4aJEtVJ494s" }
     ],
     optionalSongs: []
   },
@@ -473,10 +473,10 @@ window.CHOIR_PLANS_FALLBACK = [
     pdfLinks: [{"label":"All PDFs","url":"https://drive.google.com/file/d/1N7Tx9uA65Dr6dxd3FJ1KNlE4gUKrc9LF/view"}],
     songs: [
       { role: "Entrance", title: "On Eagle’s Wings", composer: "", videoId: "" },
-      { role: "Offertory", title: "Christ the Lord", composer: "Hart / Feduccia", videoId: "" },
-      { role: "Communion", title: "The Lord Is My Light", composer: "Walker", videoId: "" },
+      { role: "Offertory", title: "Christ the Lord", composer: "Hart / Feduccia", videoId: "ODn8t2ikHdw" },
+      { role: "Communion", title: "The Lord Is My Light", composer: "Walker", videoId: "ft9gH5IHssE" },
       { role: "Communion", title: "Shepherd Me, O God", composer: "", videoId: "" },
-      { role: "Recessional", title: "City of God", composer: "", videoId: "" }
+      { role: "Recessional", title: "City of God", composer: "", videoId: "kXZTYV1Pq_M" }
     ],
     optionalSongs: []
   },
@@ -486,11 +486,11 @@ window.CHOIR_PLANS_FALLBACK = [
     massTime: "",
     pdfLinks: [{"label":"All PDFs","url":"https://drive.google.com/file/d/18CjavVY62-yzBNycKNA1jlPCHld3vLGN/view"}],
     songs: [
-      { role: "Entrance", title: "In This Place", composer: "Thomson", videoId: "" },
-      { role: "Offertory", title: "In Every Age", composer: "Whitaker", videoId: "" },
-      { role: "Communion", title: "You Are Near", composer: "Schutte", videoId: "" },
-      { role: "Communion", title: "Eye Has Not Seen", composer: "Haugen", videoId: "" },
-      { role: "Recessional", title: "Kapayapaan, Peace Be with You", composer: "Nieva", videoId: "" }
+      { role: "Entrance", title: "In This Place", composer: "Thomson", videoId: "kMcroYiXb7E" },
+      { role: "Offertory", title: "In Every Age", composer: "Whitaker", videoId: "5BxarTJavmY" },
+      { role: "Communion", title: "You Are Near", composer: "Schutte", videoId: "B6QwtsDN4xA" },
+      { role: "Communion", title: "Eye Has Not Seen", composer: "Haugen", videoId: "7jYgOQC82aU" },
+      { role: "Recessional", title: "Kapayapaan, Peace Be with You", composer: "Nieva", videoId: "__6ukoLRgds" }
     ],
     optionalSongs: []
   },
@@ -500,11 +500,11 @@ window.CHOIR_PLANS_FALLBACK = [
     massTime: "",
     pdfLinks: [],
     songs: [
-      { role: "Entrance", title: "The King of Kings, Christ Jesus Reigns", composer: "Ich Glaub An Gott", videoId: "" },
-      { role: "Offertory", title: "At the Name of Jesus", composer: "Walker", videoId: "" },
+      { role: "Entrance", title: "The King of Kings, Christ Jesus Reigns", composer: "Ich Glaub An Gott", videoId: "1qbZnhQk_PE" },
+      { role: "Offertory", title: "At the Name of Jesus", composer: "Walker", videoId: "OqmYlU40YHE" },
       { role: "Communion", title: "Bread for the World", composer: "Farrell", videoId: "" },
-      { role: "Communion", title: "Jesus the Lord", composer: "", videoId: "" },
-      { role: "Recessional", title: "To Jesus Christ, Our Sovereign King", composer: "Ich Glaub An Gott", videoId: "" }
+      { role: "Communion", title: "Jesus the Lord", composer: "", videoId: "V7uJ-gWcif0" },
+      { role: "Recessional", title: "To Jesus Christ, Our Sovereign King", composer: "Ich Glaub An Gott", videoId: "wol02WZ4AeI" }
     ],
     optionalSongs: []
   },
@@ -528,7 +528,7 @@ window.CHOIR_PLANS_FALLBACK = [
     pdfLinks: [{"label":"All PDFs","url":"https://drive.google.com/file/d/1g71UGKNpRVE1Sw8UELAMqPxxU3Rs2WWh/view"}],
     songs: [
       { role: "Entrance", title: "O Come, O Come, Emmanuel", composer: "", videoId: "" },
-      { role: "Offertory", title: "Christ the Lord", composer: "Hart / Feduccia", videoId: "" },
+      { role: "Offertory", title: "Christ the Lord", composer: "Hart / Feduccia", videoId: "ODn8t2ikHdw" },
       { role: "Communion", title: "Beyond the Moon and Stars", composer: "", videoId: "" },
       { role: "Recessional", title: "People, Look East", composer: "", videoId: "" }
     ],
@@ -541,9 +541,9 @@ window.CHOIR_PLANS_FALLBACK = [
     pdfLinks: [{"label":"All PDFs","url":"https://drive.google.com/file/d/1n4WdiCm3NqX4Z-Z_lkjq8vvnwOKdEIIj/view"}],
     songs: [
       { role: "Entrance", title: "Ready the Way", composer: "", videoId: "" },
-      { role: "Offertory", title: "Come, Emmanuel", composer: "Trevor Thomson", videoId: "" },
+      { role: "Offertory", title: "Come, Emmanuel", composer: "Trevor Thomson", videoId: "ImoDj_T7UOU" },
       { role: "Communion", title: "A Voice Cries Out", composer: "", videoId: "" },
-      { role: "Recessional", title: "Soon and Very Soon", composer: "", videoId: "" }
+      { role: "Recessional", title: "Soon and Very Soon", composer: "", videoId: "7vh10Hx7I9A" }
     ],
     optionalSongs: []
   },
@@ -553,10 +553,10 @@ window.CHOIR_PLANS_FALLBACK = [
     massTime: "",
     pdfLinks: [{"label":"All PDFs","url":"https://drive.google.com/file/d/1LW1_KlZ3lctnz-0G0BV9XiYFk3IPHmSX/view"}],
     songs: [
-      { role: "Entrance", title: "Song of Mary", composer: "Schutte", videoId: "" },
-      { role: "Offertory", title: "Holy Mary, Revealing Your Son", composer: "", videoId: "" },
-      { role: "Communion", title: "O How Blessed", composer: "Dan Schutte", videoId: "" },
-      { role: "Recessional", title: "Hail Holy Queen (Salve Regina Coelitum)", composer: "", videoId: "" }
+      { role: "Entrance", title: "Song of Mary", composer: "Schutte", videoId: "jMt9t52glws" },
+      { role: "Offertory", title: "Holy Mary, Revealing Your Son", composer: "", videoId: "stder3qe37A" },
+      { role: "Communion", title: "O How Blessed", composer: "Dan Schutte", videoId: "KsAJfoBdYRQ" },
+      { role: "Recessional", title: "Hail Holy Queen (Salve Regina Coelitum)", composer: "", videoId: "sA_fnTISgWA" }
     ],
     optionalSongs: []
   },
@@ -566,7 +566,7 @@ window.CHOIR_PLANS_FALLBACK = [
     massTime: "",
     pdfLinks: [{"label":"All PDFs","url":"https://drive.google.com/file/d/1txEW49KZkddXhFKj91fTU0vcnOPBIZ9d/view"}],
     songs: [
-      { role: "Entrance", title: "Emmanuel", composer: "Angrisano", videoId: "" },
+      { role: "Entrance", title: "Emmanuel", composer: "Angrisano", videoId: "ZFghkY6OwA0" },
       { role: "Offertory", title: "Christ, Be Our Light", composer: "", videoId: "" },
       { role: "Communion", title: "God of Mercy", composer: "Manalo", videoId: "" },
       { role: "Recessional", title: "Ready the Way", composer: "", videoId: "" }
@@ -582,7 +582,7 @@ window.CHOIR_PLANS_FALLBACK = [
       { role: "Entrance", title: "Come, Lord Jesus", composer: "Ridge", videoId: "" },
       { role: "Offertory", title: "Bread of Life (Advent setting)", composer: "Farrell", videoId: "" },
       { role: "Communion", title: "Bread for the World", composer: "", videoId: "" },
-      { role: "Recessional", title: "Emmanuel", composer: "Angrisano", videoId: "" }
+      { role: "Recessional", title: "Emmanuel", composer: "Angrisano", videoId: "ZFghkY6OwA0" }
     ],
     optionalSongs: []
   },
